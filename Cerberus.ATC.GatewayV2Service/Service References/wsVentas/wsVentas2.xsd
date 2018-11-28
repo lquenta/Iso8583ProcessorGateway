@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Ventas.EntidadesSalida" />
+  <xs:complexType name="CRcvDatosVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RcvCantidadSoat" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatAnulados" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatRevertidos" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatValidos" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvFormularioImporte" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Ventas.EntidadesSalida" minOccurs="0" name="lSoatDatosVenta" nillable="true" type="q1:ArrayOfCSoatDatosVenta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRcvDatosVentas" nillable="true" type="tns:CRcvDatosVentas" />
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesEntrada" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesEntrada" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+  <xs:complexType name="CESeg01Autenticacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CESeg">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CESeg01Autenticacion" nillable="true" type="tns:CESeg01Autenticacion" />
+  <xs:complexType name="CESeg">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" base="q1:CEModulos">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CESeg" nillable="true" type="tns:CESeg" />
+  <xs:complexType name="CESeg02CambiarContrasenia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CESeg">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContraseniaNueva" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CESeg02CambiarContrasenia" nillable="true" type="tns:CESeg02CambiarContrasenia" />
+</xs:schema>

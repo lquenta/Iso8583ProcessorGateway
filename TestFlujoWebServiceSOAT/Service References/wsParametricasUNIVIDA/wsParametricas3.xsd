@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Parametricas.EntidadesSaida" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Parametricas.EntidadesSaida" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCVehiculoTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CVehiculoTipo" nillable="true" type="tns:CVehiculoTipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCVehiculoTipo" nillable="true" type="tns:ArrayOfCVehiculoTipo" />
+  <xs:complexType name="CVehiculoTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CVehiculoTipo" nillable="true" type="tns:CVehiculoTipo" />
+  <xs:complexType name="ArrayOfCVehiculoUso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CVehiculoUso" nillable="true" type="tns:CVehiculoUso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCVehiculoUso" nillable="true" type="tns:ArrayOfCVehiculoUso" />
+  <xs:complexType name="CVehiculoUso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CVehiculoUso" nillable="true" type="tns:CVehiculoUso" />
+  <xs:complexType name="ArrayOfCDepartamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CDepartamento" nillable="true" type="tns:CDepartamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCDepartamento" nillable="true" type="tns:ArrayOfCDepartamento" />
+  <xs:complexType name="CDepartamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CDepartamento" nillable="true" type="tns:CDepartamento" />
+  <xs:complexType name="ArrayOfCFacturaTipoL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CFacturaTipoL" nillable="true" type="tns:CFacturaTipoL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCFacturaTipoL" nillable="true" type="tns:ArrayOfCFacturaTipoL" />
+  <xs:complexType name="CFacturaTipoL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CFacturaTipoL" nillable="true" type="tns:CFacturaTipoL" />
+  <xs:complexType name="ArrayOfCGestionLHabilitadas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CGestionLHabilitadas" nillable="true" type="tns:CGestionLHabilitadas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCGestionLHabilitadas" nillable="true" type="tns:ArrayOfCGestionLHabilitadas" />
+  <xs:complexType name="CGestionLHabilitadas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PrioridadVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="Secuencial" type="xs:int" />
+      <xs:element minOccurs="0" name="VentaDesde" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VentaHasta" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CGestionLHabilitadas" nillable="true" type="tns:CGestionLHabilitadas" />
+  <xs:complexType name="ArrayOfCMedioPagoL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CMedioPagoL" nillable="true" type="tns:CMedioPagoL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCMedioPagoL" nillable="true" type="tns:ArrayOfCMedioPagoL" />
+  <xs:complexType name="CMedioPagoL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatosCompletos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecuencialMasDato" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CMedioPagoL" nillable="true" type="tns:CMedioPagoL" />
+  <xs:complexType name="ArrayOfCVentaCanalL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CVentaCanalL" nillable="true" type="tns:CVentaCanalL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCVentaCanalL" nillable="true" type="tns:ArrayOfCVentaCanalL" />
+  <xs:complexType name="CVentaCanalL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Secuencial" type="xs:int" />
+      <xs:element minOccurs="0" name="TIntermediarioFk" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CVentaCanalL" nillable="true" type="tns:CVentaCanalL" />
+</xs:schema>

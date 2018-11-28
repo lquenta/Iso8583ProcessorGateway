@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" />
+  <xs:complexType name="CSVen01ValidarVendibleYObtenerDatos">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosIniciales" nillable="true" type="q1:CSoatDatosIniciales" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen01ValidarVendibleYObtenerDatos" nillable="true" type="tns:CSVen01ValidarVendibleYObtenerDatos" />
+  <xs:complexType name="CSVen">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" base="q2:CSModulos">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen" nillable="true" type="tns:CSVen" />
+  <xs:complexType name="CSVen02ObtenerPrima">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Prima" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen02ObtenerPrima" nillable="true" type="tns:CSVen02ObtenerPrima" />
+  <xs:complexType name="CSVen03EfectivizarFactTerc">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletos" nillable="true" type="q3:CSoatDatosCompletos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen03EfectivizarFactTerc" nillable="true" type="tns:CSVen03EfectivizarFactTerc" />
+  <xs:complexType name="CSVen03EfectivizarFactTercPDF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q4:CArchivosAdjuntos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen03EfectivizarFactTercPDF" nillable="true" type="tns:CSVen03EfectivizarFactTercPDF" />
+  <xs:complexType name="CSVen03EfectivizarFactCicl">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletosFactura" nillable="true" type="q5:CSoatDatosCompletosFactura" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen03EfectivizarFactCicl" nillable="true" type="tns:CSVen03EfectivizarFactCicl" />
+  <xs:complexType name="CSVen03EfectivizarFactCiclPDF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q6:CArchivosAdjuntos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen03EfectivizarFactCiclPDF" nillable="true" type="tns:CSVen03EfectivizarFactCiclPDF" />
+  <xs:complexType name="CSVen04Listar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" minOccurs="0" name="oRcvDatosVentas" nillable="true" type="q7:CRcvDatosVentas" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen04Listar" nillable="true" type="tns:CSVen04Listar" />
+  <xs:complexType name="CSVen05Obtener">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletosFactura" nillable="true" type="q8:CSoatDatosCompletosFactura" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen05Obtener" nillable="true" type="tns:CSVen05Obtener" />
+  <xs:complexType name="CSVen05ObtenerPDF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q9:CArchivosAdjuntos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen05ObtenerPDF" nillable="true" type="tns:CSVen05ObtenerPDF" />
+  <xs:complexType name="CSVen06Revertir">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NroComprobanteSoat" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen06Revertir" nillable="true" type="tns:CSVen06Revertir" />
+</xs:schema>

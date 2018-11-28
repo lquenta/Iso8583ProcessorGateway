@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" />
+  <xs:element name="Rcv10ActualizarFechaLiquidacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" minOccurs="0" name="oERcv10ActualizarFechaLiquidacion" nillable="true" type="q1:CERcv10ActualizarFechaLiquidacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv10ActualizarFechaLiquidacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" minOccurs="0" name="Rcv10ActualizarFechaLiquidacionResult" nillable="true" type="q2:CSRcv10ActualizarFechaLiquidacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv11ListarVentas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" minOccurs="0" name="oERcv11ListarVentas" nillable="true" type="q3:CERcv11ListarVentas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv11ListarVentasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" minOccurs="0" name="Rcv11ListarVentasResult" nillable="true" type="q4:CSRcv11ListarVentas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv12Efectivizar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" minOccurs="0" name="oERcv12Efectivizar" nillable="true" type="q5:CERcv12Efectivizar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv12EfectivizarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" minOccurs="0" name="Rcv12EfectivizarResult" nillable="true" type="q6:CSRcv12Efectivizar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv13Remitir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" minOccurs="0" name="oERcv13Remitir" nillable="true" type="q7:CERcv13Remitir" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv13RemitirResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" minOccurs="0" name="Rcv13RemitirResult" nillable="true" type="q8:CSRcv13Remitir" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv14Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" minOccurs="0" name="oERcv14Listar" nillable="true" type="q9:CERcv14Listar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv14ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" minOccurs="0" name="Rcv14ListarResult" nillable="true" type="q10:CSRcv14Listar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv15Obtener">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" minOccurs="0" name="oERcv15Obtener" nillable="true" type="q11:CERcv15Obtener" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv15ObtenerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" minOccurs="0" name="Rcv15ObtenerResult" nillable="true" type="q12:CSRcv15Obtener" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv16Revertir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" minOccurs="0" name="oERcv16Revertir" nillable="true" type="q13:CERcv16Revertir" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rcv16RevertirResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" minOccurs="0" name="Rcv16RevertirResult" nillable="true" type="q14:CSRcv16Revertir" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

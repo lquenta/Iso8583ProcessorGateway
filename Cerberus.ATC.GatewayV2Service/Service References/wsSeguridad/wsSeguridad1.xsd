@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Seguridad.UsuariosInternos.EntidadesSalida" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Seguridad.UsuariosInternos.EntidadesSalida" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CTransUsuarioDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContratoSecuencial" type="xs:int" />
+      <xs:element minOccurs="0" name="EmpleadoApCasada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoApMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoApPaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoCargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoCiudadResidencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoDocuentoNro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoDocumentoCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoDocumentoExtension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoDocumentoTipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoNombreAlt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoNombreCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoNombrePrim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoNombreSeg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoSecuencial" type="xs:int" />
+      <xs:element minOccurs="0" name="EmpleadoUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpleadoUsuarioAD" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoEmpleadoActivo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SucursalCiudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SucursalCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="SucursalDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SucursalDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SucursalIdDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SucursalNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperiorCargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperiorNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperiorSecuencial" type="xs:int" />
+      <xs:element minOccurs="0" name="SuperiorUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperiorUsuarioAD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lRol" nillable="true" type="tns:ArrayOfCRol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CTransUsuarioDatos" nillable="true" type="tns:CTransUsuarioDatos" />
+  <xs:complexType name="ArrayOfCRol">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CRol" nillable="true" type="tns:CRol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCRol" nillable="true" type="tns:ArrayOfCRol" />
+  <xs:complexType name="CRol">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RolDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RolId" type="xs:int" />
+      <xs:element minOccurs="0" name="RolSistemas" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRol" nillable="true" type="tns:CRol" />
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesEntrada" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesSalida" />
+  <xs:element name="Seg01Autenticacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesEntrada" minOccurs="0" name="oESeg01Autenticacion" nillable="true" type="q1:CESeg01Autenticacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Seg01AutenticacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesSalida" minOccurs="0" name="Seg01AutenticacionResult" nillable="true" type="q2:CSSeg01Autenticacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Seg02CambiarContrasenia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesEntrada" minOccurs="0" name="oESeg02CambiarContrasenia" nillable="true" type="q3:CESeg02CambiarContrasenia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Seg02CambiarContraseniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesSalida" minOccurs="0" name="Seg02CambiarContraseniaResult" nillable="true" type="q4:CSSeg02CambiarContrasenia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

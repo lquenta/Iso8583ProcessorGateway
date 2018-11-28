@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wsVentas" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Ventas.EntidadesSalida" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IwsVentas_Ven01ValidarVendibleYObtenerDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven01ValidarVendibleYObtenerDatos" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven01ValidarVendibleYObtenerDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven01ValidarVendibleYObtenerDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven02ObtenerPrima_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven02ObtenerPrima" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven02ObtenerPrima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven02ObtenerPrimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactTerc_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactTerc" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactTerc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactTercResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactTercPDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactTercPDF" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactTercPDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactTercPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactCicl_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactCicl" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactCicl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactCiclResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactCiclPDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactCiclPDF" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactCiclPDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactCiclPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven04Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven04Listar" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven04Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven04ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven05Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven05Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven05Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven05ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven05ObtenerPDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven05ObtenerPDF" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven05ObtenerPDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven05ObtenerPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven06Revertir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven06Revertir" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven06Revertir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven06RevertirResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IwsVentas">
+    <wsdl:operation name="Ven01ValidarVendibleYObtenerDatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven01ValidarVendibleYObtenerDatos" message="tns:IwsVentas_Ven01ValidarVendibleYObtenerDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven01ValidarVendibleYObtenerDatosResponse" message="tns:IwsVentas_Ven01ValidarVendibleYObtenerDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven02ObtenerPrima">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven02ObtenerPrima" message="tns:IwsVentas_Ven02ObtenerPrima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven02ObtenerPrimaResponse" message="tns:IwsVentas_Ven02ObtenerPrima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactTerc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactTerc" message="tns:IwsVentas_Ven03EfectivizarFactTerc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactTercResponse" message="tns:IwsVentas_Ven03EfectivizarFactTerc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactTercPDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactTercPDF" message="tns:IwsVentas_Ven03EfectivizarFactTercPDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactTercPDFResponse" message="tns:IwsVentas_Ven03EfectivizarFactTercPDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactCicl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCicl" message="tns:IwsVentas_Ven03EfectivizarFactCicl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclResponse" message="tns:IwsVentas_Ven03EfectivizarFactCicl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactCiclPDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclPDF" message="tns:IwsVentas_Ven03EfectivizarFactCiclPDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclPDFResponse" message="tns:IwsVentas_Ven03EfectivizarFactCiclPDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven04Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven04Listar" message="tns:IwsVentas_Ven04Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven04ListarResponse" message="tns:IwsVentas_Ven04Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven05Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven05Obtener" message="tns:IwsVentas_Ven05Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven05ObtenerResponse" message="tns:IwsVentas_Ven05Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven05ObtenerPDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven05ObtenerPDF" message="tns:IwsVentas_Ven05ObtenerPDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven05ObtenerPDFResponse" message="tns:IwsVentas_Ven05ObtenerPDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven06Revertir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven06Revertir" message="tns:IwsVentas_Ven06Revertir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven06RevertirResponse" message="tns:IwsVentas_Ven06Revertir_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IwsVentas" type="tns:IwsVentas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ven01ValidarVendibleYObtenerDatos">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven01ValidarVendibleYObtenerDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven02ObtenerPrima">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven02ObtenerPrima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactTerc">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven03EfectivizarFactTerc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactTercPDF">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven03EfectivizarFactTercPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactCicl">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCicl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactCiclPDF">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven04Listar">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven04Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven05Obtener">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven05Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven05ObtenerPDF">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven05ObtenerPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven06Revertir">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven06Revertir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsVentas">
+    <wsdl:port name="BasicHttpBinding_IwsVentas" binding="tns:BasicHttpBinding_IwsVentas">
+      <soap:address location="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

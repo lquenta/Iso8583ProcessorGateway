@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesSalida" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Seguridad.ClasesSalida" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Seguridad.UsuariosInternos.EntidadesSalida" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+  <xs:complexType name="CSSeg01Autenticacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSSeg">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SeguridadToken" type="xs:int" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Seguridad.UsuariosInternos.EntidadesSalida" minOccurs="0" name="oTransUsuarioDatos" nillable="true" type="q1:CTransUsuarioDatos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSSeg01Autenticacion" nillable="true" type="tns:CSSeg01Autenticacion" />
+  <xs:complexType name="CSSeg">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" base="q2:CSModulos">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSSeg" nillable="true" type="tns:CSSeg" />
+  <xs:complexType name="CSSeg02CambiarContrasenia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSSeg">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSSeg02CambiarContrasenia" nillable="true" type="tns:CSSeg02CambiarContrasenia" />
+</xs:schema>

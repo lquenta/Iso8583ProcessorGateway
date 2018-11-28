@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cb158f5d-bc7f-461f-ac62-9e3491293e92" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsSeguridad.xsd" MetadataType="Schema" ID="c156c681-da6f-4f48-a635-d3bc7517bbe1" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsSeguridad.disco" MetadataType="Disco" ID="2f0e15d3-92e1-4196-8c5e-7bcf6f831b97" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?disco" />
+    <MetadataFile FileName="wsSeguridad.wsdl" MetadataType="Wsdl" ID="bf2437ca-a265-496d-8859-b84279bc8c8c" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?wsdl" />
+    <MetadataFile FileName="wsSeguridad1.xsd" MetadataType="Schema" ID="e531dbeb-c041-473b-a115-0f28a019a30e" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd5" />
+    <MetadataFile FileName="wsSeguridad2.xsd" MetadataType="Schema" ID="3ee3dff7-767b-4b04-92d1-3392f93ec926" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd4" />
+    <MetadataFile FileName="wsSeguridad3.xsd" MetadataType="Schema" ID="96d96558-955b-4410-84de-d667911a91f1" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd3" />
+    <MetadataFile FileName="wsSeguridad4.xsd" MetadataType="Schema" ID="5afdc5b6-79bf-439b-af0f-42320367a86f" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsSeguridad5.xsd" MetadataType="Schema" ID="1bd2a8ba-a21c-426c-a4e1-cb63961c0631" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Seguridad/wsSeguridad.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

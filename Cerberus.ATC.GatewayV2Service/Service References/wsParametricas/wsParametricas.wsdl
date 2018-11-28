@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wsParametricas" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Parametricas.EntidadesSalida" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Parametricas.EntidadesSaida" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IwsParametricas_ParObtenerPrimas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerPrimas" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerPrimas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerPrimasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerVehiculoTipos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerVehiculoTipos" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerVehiculoTipos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerVehiculoTiposResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerVehiculoUsos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerVehiculoUsos" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerVehiculoUsos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerVehiculoUsosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerDepartamentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerDepartamentos" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerDepartamentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerDepartamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerFacturaTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerFacturaTipo" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerFacturaTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerFacturaTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerGestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerGestion" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerGestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerGestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerMedioPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerMedioPago" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerMedioPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerMedioPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerVentaCanal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerVentaCanal" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerVentaCanal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerVentaCanalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerBancos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerBancos" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerBancos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerBancosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IwsParametricas">
+    <wsdl:operation name="ParObtenerPrimas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerPrimas" message="tns:IwsParametricas_ParObtenerPrimas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerPrimasResponse" message="tns:IwsParametricas_ParObtenerPrimas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerVehiculoTipos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerVehiculoTipos" message="tns:IwsParametricas_ParObtenerVehiculoTipos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerVehiculoTiposResponse" message="tns:IwsParametricas_ParObtenerVehiculoTipos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerVehiculoUsos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerVehiculoUsos" message="tns:IwsParametricas_ParObtenerVehiculoUsos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerVehiculoUsosResponse" message="tns:IwsParametricas_ParObtenerVehiculoUsos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerDepartamentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerDepartamentos" message="tns:IwsParametricas_ParObtenerDepartamentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerDepartamentosResponse" message="tns:IwsParametricas_ParObtenerDepartamentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerFacturaTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerFacturaTipo" message="tns:IwsParametricas_ParObtenerFacturaTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerFacturaTipoResponse" message="tns:IwsParametricas_ParObtenerFacturaTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerGestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerGestion" message="tns:IwsParametricas_ParObtenerGestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerGestionResponse" message="tns:IwsParametricas_ParObtenerGestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerMedioPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerMedioPago" message="tns:IwsParametricas_ParObtenerMedioPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerMedioPagoResponse" message="tns:IwsParametricas_ParObtenerMedioPago_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerVentaCanal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerVentaCanal" message="tns:IwsParametricas_ParObtenerVentaCanal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerVentaCanalResponse" message="tns:IwsParametricas_ParObtenerVentaCanal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerBancos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerBancos" message="tns:IwsParametricas_ParObtenerBancos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerBancosResponse" message="tns:IwsParametricas_ParObtenerBancos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IwsParametricas" type="tns:IwsParametricas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ParObtenerPrimas">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerPrimas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerVehiculoTipos">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerVehiculoTipos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerVehiculoUsos">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerVehiculoUsos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerDepartamentos">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerDepartamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerFacturaTipo">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerFacturaTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerGestion">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerGestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerMedioPago">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerMedioPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerVentaCanal">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerVentaCanal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerBancos">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerBancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsParametricas">
+    <wsdl:port name="BasicHttpBinding_IwsParametricas" binding="tns:BasicHttpBinding_IwsParametricas">
+      <soap:address location="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

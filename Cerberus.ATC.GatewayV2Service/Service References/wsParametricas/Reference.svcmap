@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="875b1e96-e531-4892-899f-8efd89db924e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsParametricas.xsd" MetadataType="Schema" ID="4fca0ae1-bdc9-4808-b2a9-6be2cc6895e2" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsParametricas.wsdl" MetadataType="Wsdl" ID="fdb33c37-27ec-4bda-a264-2cb962714d99" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?wsdl" />
+    <MetadataFile FileName="wsParametricas1.xsd" MetadataType="Schema" ID="52e12fac-a56b-4b07-985b-43e008c8a92f" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd4" />
+    <MetadataFile FileName="wsParametricas.disco" MetadataType="Disco" ID="e4529f92-e861-4ac0-a896-a7d12ec2ad11" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?disco" />
+    <MetadataFile FileName="wsParametricas2.xsd" MetadataType="Schema" ID="7128dc88-b0c1-42e6-a398-63a97be775f0" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsParametricas3.xsd" MetadataType="Schema" ID="277870b9-77ae-484f-927d-4d714738ddf0" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd6" />
+    <MetadataFile FileName="wsParametricas4.xsd" MetadataType="Schema" ID="980da0dc-9896-4218-831d-e125230830c7" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsParametricas5.xsd" MetadataType="Schema" ID="e40653dd-5098-4790-bbae-e2f7d31ac155" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd3" />
+    <MetadataFile FileName="wsParametricas6.xsd" MetadataType="Schema" ID="62b45491-8be6-43bc-be37-a1247f06c1d9" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

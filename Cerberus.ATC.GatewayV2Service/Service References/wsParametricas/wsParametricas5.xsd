@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CEModulos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SoatTIntermediarioFk" type="xs:int" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CEModulos" nillable="true" type="tns:CEModulos" />
+  <xs:complexType name="CSModulos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoRetorno" type="xs:int" />
+      <xs:element minOccurs="0" name="Exito" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CSModulos" nillable="true" type="tns:CSModulos" />
+</xs:schema>

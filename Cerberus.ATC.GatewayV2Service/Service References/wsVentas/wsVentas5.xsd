@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+  <xs:complexType name="CEVen01ValidarVendibleYObtenerDatos">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoatVentaCajero" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen01ValidarVendibleYObtenerDatos" nillable="true" type="tns:CEVen01ValidarVendibleYObtenerDatos" />
+  <xs:complexType name="CEVen">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" base="q1:CEModulos">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SeguridadToken" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatTParGestionFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatTParVentaCanalFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatVentaVendedor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiPlaca" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen" nillable="true" type="tns:CEVen" />
+  <xs:complexType name="CEVen02ObtenerPrima">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoatTParDepartamentoPcFk" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatTParVehiculoTipoFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatTParVehiculoUsoFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatVentaCajero" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen02ObtenerPrima" nillable="true" type="tns:CEVen02ObtenerPrima" />
+  <xs:complexType name="CEVen03EfectivizarFactTerc">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen03EfectivizarFact">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FactAutorizacionNumero" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactCodigoControl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactDetalle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactFecLimEmi" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FactFecha" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FactNumero" type="xs:int" />
+          <xs:element minOccurs="0" name="FactTParFacturaTipoFk" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen03EfectivizarFactTerc" nillable="true" type="tns:CEVen03EfectivizarFactTerc" />
+  <xs:complexType name="CEVen03EfectivizarFact">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FactCorreoCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactNitCi" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactPrima" type="xs:int" />
+          <xs:element minOccurs="0" name="FactRazonSocial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactTelefonoCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatRosetaNumero" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatTParDepartamentoPcFk" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatTParDepartamentoVtFk" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatTParMedioPagoFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatTParVehiculoTipoFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatTParVehiculoUsoFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatVentaCajero" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatVentaDatosAdi" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen03EfectivizarFact" nillable="true" type="tns:CEVen03EfectivizarFact" />
+  <xs:complexType name="CEVen03EfectivizarFactCicl">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen03EfectivizarFact">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FactSucursalFk" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen03EfectivizarFactCicl" nillable="true" type="tns:CEVen03EfectivizarFactCicl" />
+  <xs:complexType name="CEVen04Listar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoatVentaFecha" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen04Listar" nillable="true" type="tns:CEVen04Listar" />
+  <xs:complexType name="CEVen05Obtener">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FactAutorizacionNumero" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactNumero" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatVentaCajero" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen05Obtener" nillable="true" type="tns:CEVen05Obtener" />
+  <xs:complexType name="CEVen06Revertir">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FactAutorizacionNumero" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactNumero" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatVentaCajero" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen06Revertir" nillable="true" type="tns:CEVen06Revertir" />
+  <xs:complexType name="CEVen07SolRevertir">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Motivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen07SolRevertir" nillable="true" type="tns:CEVen07SolRevertir" />
+</xs:schema>

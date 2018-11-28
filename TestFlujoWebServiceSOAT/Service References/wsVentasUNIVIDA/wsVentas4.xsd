@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CSoatDatosIniciales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SoatRosetaNumero" type="xs:int" />
+      <xs:element minOccurs="0" name="SoatTParDepartamentoPcDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoatTParDepartamentoPcFk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoatTParGestionFk" type="xs:int" />
+      <xs:element minOccurs="0" name="SoatTParVehiculoTipoDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoatTParVehiculoTipoFk" type="xs:int" />
+      <xs:element minOccurs="0" name="SoatTParVehiculoUsoDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoatTParVehiculoUsoFk" type="xs:int" />
+      <xs:element minOccurs="0" name="VehiPlaca" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CSoatDatosIniciales" nillable="true" type="tns:CSoatDatosIniciales" />
+  <xs:complexType name="CSoatDatosCompletos">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSoatDatosIniciales">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FactNumero" type="xs:int" />
+          <xs:element minOccurs="0" name="PropCI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropCelular" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropDireccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropNIT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropTelefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropTomador" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatFechaCoberturaFin" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SoatFechaCoberturaInicio" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SoatFechaVenta" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SoatMensaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatQRContenido" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatQRImagen" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="VehiAcople" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VehiAnio" type="xs:int" />
+          <xs:element minOccurs="0" name="VehiCapacidadCarga" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VehiChasis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiMarca" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiModelo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiMotor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSoatDatosCompletos" nillable="true" type="tns:CSoatDatosCompletos" />
+  <xs:complexType name="CSoatDatosCompletosFactura">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSoatDatosCompletos">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="oFacturaMaestro" nillable="true" type="tns:CFacturaMaestro" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSoatDatosCompletosFactura" nillable="true" type="tns:CSoatDatosCompletosFactura" />
+  <xs:complexType name="CFacturaMaestro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActividadEconomica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoControl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoQR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DireccionEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DireccionSucursal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoFactura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacturaQR" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="FaxEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaLimiteEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImporteLiteral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImporteNumeral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LFacturaDetalle" nillable="true" type="tns:ArrayOfCFacturaDetalle" />
+      <xs:element minOccurs="0" name="Leyenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lugar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MunicipioDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NitCiCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NitEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreSucursal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroAutorizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroFactura" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroSucursal" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroTramite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocialCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SucursalFk" type="xs:int" />
+      <xs:element minOccurs="0" name="TefefonosEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelefonoSucursal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoEmision" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CFacturaMaestro" nillable="true" type="tns:CFacturaMaestro" />
+  <xs:complexType name="ArrayOfCFacturaDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CFacturaDetalle" nillable="true" type="tns:CFacturaDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCFacturaDetalle" nillable="true" type="tns:ArrayOfCFacturaDetalle" />
+  <xs:complexType name="CFacturaDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteUnitario" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LineaDetalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrecioUnitario" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CFacturaDetalle" nillable="true" type="tns:CFacturaDetalle" />
+</xs:schema>

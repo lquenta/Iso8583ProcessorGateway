@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" />
+  <xs:complexType name="CSRcv10ActualizarFechaLiquidacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSRcv">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CantidadActualizados" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSRcv10ActualizarFechaLiquidacion" nillable="true" type="tns:CSRcv10ActualizarFechaLiquidacion" />
+  <xs:complexType name="CSRcv">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" base="q1:CSModulos">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSRcv" nillable="true" type="tns:CSRcv" />
+  <xs:complexType name="CSRcv11ListarVentas">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSRcv">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" minOccurs="0" name="oRcvDatosVentas" nillable="true" type="q2:CRcvDatosVentas" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSRcv11ListarVentas" nillable="true" type="tns:CSRcv11ListarVentas" />
+  <xs:complexType name="CSRcv12Efectivizar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSRcv">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RcvSecuencial" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSRcv12Efectivizar" nillable="true" type="tns:CSRcv12Efectivizar" />
+  <xs:complexType name="CSRcv13Remitir">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSRcv">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSRcv13Remitir" nillable="true" type="tns:CSRcv13Remitir" />
+  <xs:complexType name="CSRcv14Listar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSRcv">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" minOccurs="0" name="lRcvDatos" nillable="true" type="q3:ArrayOfCRcvDatos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSRcv14Listar" nillable="true" type="tns:CSRcv14Listar" />
+  <xs:complexType name="CSRcv15Obtener">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSRcv">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" minOccurs="0" name="oRcvDatosIniciales" nillable="true" type="q4:CRcvDatosIniciales" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSRcv15Obtener" nillable="true" type="tns:CSRcv15Obtener" />
+  <xs:complexType name="CSRcv16Revertir">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSRcv">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RcvSecuencial" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSRcv16Revertir" nillable="true" type="tns:CSRcv16Revertir" />
+</xs:schema>

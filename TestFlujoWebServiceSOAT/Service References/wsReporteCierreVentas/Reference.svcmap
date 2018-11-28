@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4837a18b-c7d0-425b-8620-b0bb98547486" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsReporteCierreVentas.xsd" MetadataType="Schema" ID="6b6abb02-a48c-4e9c-a950-eda08f74d834" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd6" />
+    <MetadataFile FileName="wsReporteCierreVentas1.xsd" MetadataType="Schema" ID="904567d9-61a3-4534-9fc1-0a3850b9dda7" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsReporteCierreVentas2.xsd" MetadataType="Schema" ID="bc36cd0c-3446-4f0c-a196-4b9514b64234" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsReporteCierreVentas3.xsd" MetadataType="Schema" ID="2c960776-bfb6-4163-a017-98483ae429b2" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsReporteCierreVentas4.xsd" MetadataType="Schema" ID="d4a48ea2-6798-4788-8662-d2701e88d242" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd7" />
+    <MetadataFile FileName="wsReporteCierreVentas.disco" MetadataType="Disco" ID="b17d8dbd-6637-4364-b94d-6e17f047a312" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?disco" />
+    <MetadataFile FileName="wsReporteCierreVentas5.xsd" MetadataType="Schema" ID="40b9c4fb-5a53-4974-9a70-053e4758abb1" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd5" />
+    <MetadataFile FileName="wsReporteCierreVentas6.xsd" MetadataType="Schema" ID="97a39d0e-e6d3-4335-baec-c3858c08a997" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd4" />
+    <MetadataFile FileName="wsReporteCierreVentas7.xsd" MetadataType="Schema" ID="6f32db46-58d0-4f6f-a6bd-6f62a955be22" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd3" />
+    <MetadataFile FileName="wsReporteCierreVentas.wsdl" MetadataType="Wsdl" ID="7bae5275-8b0f-429c-a17a-28e2c7047717" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

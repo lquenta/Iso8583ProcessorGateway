@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" />
+  <xs:complexType name="CERcv10ActualizarFechaLiquidacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CERcv">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" minOccurs="0" name="lDatosLiquidacionMaestro" nillable="true" type="q1:ArrayOfCDatosLiquidacionMaestro" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CERcv10ActualizarFechaLiquidacion" nillable="true" type="tns:CERcv10ActualizarFechaLiquidacion" />
+  <xs:complexType name="CERcv">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" base="q2:CEModulos">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SeguridadToken" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatTParGestionFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatTParVentaCanalFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatVentaVendedor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CERcv" nillable="true" type="tns:CERcv" />
+  <xs:complexType name="CERcv11ListarVentas">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CERcv">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoatVentaFecha" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CERcv11ListarVentas" nillable="true" type="tns:CERcv11ListarVentas" />
+  <xs:complexType name="CERcv12Efectivizar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CERcv">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RcvCantidad" type="xs:int" />
+          <xs:element minOccurs="0" name="RcvImporte" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RcvJsonMedioPago" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcvTSucursalFk" type="xs:int" />
+          <xs:element minOccurs="0" name="SoatVentaFecha" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CERcv12Efectivizar" nillable="true" type="tns:CERcv12Efectivizar" />
+  <xs:complexType name="CERcv13Remitir">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CERcv">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RcvSecuencial" type="xs:int" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q3:CArchivosAdjuntos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CERcv13Remitir" nillable="true" type="tns:CERcv13Remitir" />
+  <xs:complexType name="CERcv14Listar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CERcv">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CERcv14Listar" nillable="true" type="tns:CERcv14Listar" />
+  <xs:complexType name="CERcv15Obtener">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CERcv">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RcvSecuencial" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CERcv15Obtener" nillable="true" type="tns:CERcv15Obtener" />
+  <xs:complexType name="CERcv16Revertir">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CERcv">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RcvSecuencial" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CERcv16Revertir" nillable="true" type="tns:CERcv16Revertir" />
+</xs:schema>

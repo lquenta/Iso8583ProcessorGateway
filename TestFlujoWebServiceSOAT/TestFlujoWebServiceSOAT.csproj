@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A59CEF25-0FD1-4BF3-AD99-E376688F587E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestFlujoWebServiceSOAT</RootNamespace>
+    <AssemblyName>TestFlujoWebServiceSOAT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\wsVentasUNIVIDA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsParametricasUNIVIDA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsReporteCierreVentas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsSeguridadSOAT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen01ValidarVendibleYObtenerDatos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen02ObtenerPrima.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen03EfectivizarFactCicl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen03EfectivizarFactCiclPDF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen03EfectivizarFactTerc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen03EfectivizarFactTercPDF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen04Listar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen05Obtener.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen05ObtenerPDF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen06Revertir.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas.wsdl" />
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerDepartamentos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerFacturaTipo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerGestion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerMedioPago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerPrimas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerVehiculoTipos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerVehiculoUsos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerVentaCanal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas.wsdl" />
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv10ActualizarFechaLiquidacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv11ListarVentas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv12Efectivizar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv13Remitir.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv14Listar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv15Obtener.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv16Revertir.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas.wsdl" />
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridadSOAT\TestFlujoWebServiceSOAT.wsSeguridadSOAT.CSSeg01Autenticacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsSeguridadSOAT\TestFlujoWebServiceSOAT.wsSeguridadSOAT.CSSeg02CambiarContrasenia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsSeguridadSOAT\wsSeguridad.wsdl" />
+    <None Include="Service References\wsSeguridadSOAT\wsSeguridad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridadSOAT\wsSeguridad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridadSOAT\wsSeguridad2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridadSOAT\wsSeguridad3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridadSOAT\wsSeguridad4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridadSOAT\wsSeguridad5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\wsVentasUNIVIDA\" />
+    <WCFMetadataStorage Include="Service References\wsParametricasUNIVIDA\" />
+    <WCFMetadataStorage Include="Service References\wsReporteCierreVentas\" />
+    <WCFMetadataStorage Include="Service References\wsSeguridadSOAT\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsSeguridadSOAT\wsSeguridad.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsSeguridadSOAT\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsSeguridadSOAT\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsSeguridadSOAT\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsParametricasUNIVIDA\wsParametricas.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsParametricasUNIVIDA\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsParametricasUNIVIDA\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsParametricasUNIVIDA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsVentasUNIVIDA\wsVentas.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsVentasUNIVIDA\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsVentasUNIVIDA\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsVentasUNIVIDA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsReporteCierreVentas\wsReporteCierreVentas.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsReporteCierreVentas\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsReporteCierreVentas\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsReporteCierreVentas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

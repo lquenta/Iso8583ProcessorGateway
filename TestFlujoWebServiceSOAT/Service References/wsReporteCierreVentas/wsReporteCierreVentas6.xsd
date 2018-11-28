@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Ventas.EntidadesSalida" />
+  <xs:complexType name="ArrayOfCDatosLiquidacionMaestro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CDatosLiquidacionMaestro" nillable="true" type="tns:CDatosLiquidacionMaestro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCDatosLiquidacionMaestro" nillable="true" type="tns:ArrayOfCDatosLiquidacionMaestro" />
+  <xs:complexType name="CDatosLiquidacionMaestro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FechaLiquidacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+      <xs:element minOccurs="0" name="oDatosLiquidacionDetalle" nillable="true" type="tns:CDatosLiquidacionDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CDatosLiquidacionMaestro" nillable="true" type="tns:CDatosLiquidacionMaestro" />
+  <xs:complexType name="CDatosLiquidacionDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoAutorizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaOrigen" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaProceso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Filler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImporteComision" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteOrigen" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroComprobante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroEstablecimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroTarjeta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SucursalZonaGeografica" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CDatosLiquidacionDetalle" nillable="true" type="tns:CDatosLiquidacionDetalle" />
+  <xs:complexType name="CRcvDatosVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RcvCantidadSoat" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatAnulados" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatRevertidos" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatValidos" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvFormularioImporte" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Ventas.EntidadesSalida" minOccurs="0" name="lSoatDatosVenta" nillable="true" type="q1:ArrayOfCSoatDatosVenta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRcvDatosVentas" nillable="true" type="tns:CRcvDatosVentas" />
+  <xs:complexType name="ArrayOfCRcvDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CRcvDatos" nillable="true" type="tns:CRcvDatos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCRcvDatos" nillable="true" type="tns:ArrayOfCRcvDatos" />
+  <xs:complexType name="CRcvDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RcvCantidadSoat" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatAnulados" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatRevertidos" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvCantidadSoatValidos" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvEstadoRemitido" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RcvFormularioFecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RcvFormularioImporte" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RcvSecuencial" type="xs:int" />
+      <xs:element minOccurs="0" name="RcvTParGenericaEstadoFk" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRcvDatos" nillable="true" type="tns:CRcvDatos" />
+  <xs:complexType name="CRcvDatosIniciales">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CRcvDatos">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RcvFechaElaborado" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RcvFechaElaboradoFormat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcvFormularioFechaFormat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcvFormularioNumero" type="xs:int" />
+          <xs:element minOccurs="0" name="RcvTIntermediarioFk" type="xs:int" />
+          <xs:element minOccurs="0" name="RcvTParGestionFk" type="xs:int" />
+          <xs:element minOccurs="0" name="RcvTParVentaCanalFk" type="xs:int" />
+          <xs:element minOccurs="0" name="RcvVentaVendedor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CRcvDatosIniciales" nillable="true" type="tns:CRcvDatosIniciales" />
+</xs:schema>

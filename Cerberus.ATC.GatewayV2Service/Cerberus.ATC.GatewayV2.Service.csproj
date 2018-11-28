@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12ABC5B7-B812-4F18-AE6C-8BF3CC593E50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cerberus.ATC.GatewayV2Service</RootNamespace>
+    <AssemblyName>Cerberus.ATC.GatewayV2Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BIM-ISO8583.NET">
+      <HintPath>lib\BIM-ISO8583.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.11\lib\net40-client\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MTI_ProcessingCodeRouter.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsParametricas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsSeguridad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsVentas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service1.Designer.cs">
+      <DependentUpon>Service1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TCPServer.cs" />
+    <Compile Include="TCPSocketListener.cs" />
+    <Compile Include="Tunnel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen01ValidarVendibleYObtenerDatos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen02ObtenerPrima.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen03EfectivizarFactCicl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen03EfectivizarFactCiclPDF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen03EfectivizarFactTerc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen03EfectivizarFactTercPDF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen04Listar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen05Obtener.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen05ObtenerPDF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen06Revertir.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen07SolRevertir.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsVentas\configuration.svcinfo" />
+    <None Include="Service References\wsVentas\configuration91.svcinfo" />
+    <None Include="Service References\wsVentas\wsVentas.disco" />
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerBancos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerDepartamentos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerFacturaTipo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerGestion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerMedioPago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerPrimas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerVehiculoTipos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerVehiculoUsos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerVentaCanal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsParametricas\configuration.svcinfo" />
+    <None Include="Service References\wsParametricas\configuration91.svcinfo" />
+    <None Include="Service References\wsParametricas\wsParametricas.disco" />
+    <None Include="Service References\wsParametricas\wsParametricas.wsdl" />
+    <None Include="Service References\wsParametricas\wsParametricas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricas\wsParametricas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricas\wsParametricas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricas\wsParametricas3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricas\wsParametricas4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricas\wsParametricas5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsParametricas\wsParametricas6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridad\Cerberus.ATC.GatewayV2Service.wsSeguridad.CSSeg01Autenticacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsSeguridad\Cerberus.ATC.GatewayV2Service.wsSeguridad.CSSeg02CambiarContrasenia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsSeguridad\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsSeguridad\configuration.svcinfo" />
+    <None Include="Service References\wsSeguridad\configuration91.svcinfo" />
+    <None Include="Service References\wsSeguridad\wsSeguridad.disco" />
+    <None Include="app.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\wsSeguridad\wsSeguridad.wsdl" />
+    <None Include="Service References\wsSeguridad\wsSeguridad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridad\wsSeguridad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridad\wsSeguridad2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridad\wsSeguridad3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridad\wsSeguridad4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSeguridad\wsSeguridad5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas.wsdl" />
+    <None Include="Service References\wsVentas\wsVentas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsVentas\wsVentas8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\wsParametricas\" />
+    <WCFMetadataStorage Include="Service References\wsSeguridad\" />
+    <WCFMetadataStorage Include="Service References\wsVentas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

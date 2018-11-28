@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" />
+  <xs:import schemaLocation="http://181.188.175.133:9801/Modulos/Parametricas/wsParametricas.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" />
+  <xs:element name="ParObtenerPrimas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerPrimas" nillable="true" type="q1:CEParObtenerPrimas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerPrimasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerPrimasResult" nillable="true" type="q2:CSParObtenerPrimas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerVehiculoTipos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerVehiculoTipos" nillable="true" type="q3:CEParObtenerVehiculoTipos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerVehiculoTiposResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerVehiculoTiposResult" nillable="true" type="q4:CSParObtenerVehiculoTipos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerVehiculoUsos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerVehiculoUsos" nillable="true" type="q5:CEParObtenerVehiculoUsos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerVehiculoUsosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerVehiculoUsosResult" nillable="true" type="q6:CSParObtenerVehiculoUsos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerDepartamentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerDepartamentos" nillable="true" type="q7:CEParObtenerDepartamentos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerDepartamentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerDepartamentosResult" nillable="true" type="q8:CSParObtenerDepartamentos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerFacturaTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerFacturaTipo" nillable="true" type="q9:CEParObtenerFacturaTipo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerFacturaTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerFacturaTipoResult" nillable="true" type="q10:CSParObtenerFacturaTipo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerGestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerGestion" nillable="true" type="q11:CEParObtenerGestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerGestionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerGestionResult" nillable="true" type="q12:CSParObtenerGestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerMedioPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerMedioPago" nillable="true" type="q13:CEParObtenerMedioPago" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerMedioPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerMedioPagoResult" nillable="true" type="q14:CSParObtenerMedioPago" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerVentaCanal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerVentaCanal" nillable="true" type="q15:CEParObtenerVentaCanal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerVentaCanalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerVentaCanalResult" nillable="true" type="q16:CSParObtenerVentaCanal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Ventas.EntidadesSalida" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Ventas.EntidadesSalida" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCSoatDatosVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CSoatDatosVenta" nillable="true" type="tns:CSoatDatosVenta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCSoatDatosVenta" nillable="true" type="tns:ArrayOfCSoatDatosVenta" />
+  <xs:complexType name="CSoatDatosVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FactAutorizacionNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FactFecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FactNumero" type="xs:int" />
+      <xs:element minOccurs="0" name="FactPrima" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+      <xs:element minOccurs="0" name="SoatTParGenericaEstadoFk" type="xs:int" />
+      <xs:element minOccurs="0" name="VehiPlaca" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CSoatDatosVenta" nillable="true" type="tns:CSoatDatosVenta" />
+</xs:schema>

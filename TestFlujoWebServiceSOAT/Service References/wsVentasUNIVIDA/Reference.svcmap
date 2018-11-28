@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a7b0d33d-3a3c-4813-8681-2de0fb247afd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsVentas.xsd" MetadataType="Schema" ID="6294580f-4ee0-483c-8e1c-b413bbcaedd2" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd3" />
+    <MetadataFile FileName="wsVentas.disco" MetadataType="Disco" ID="97a43d95-541a-4da0-8233-1cf0477258a3" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?disco" />
+    <MetadataFile FileName="wsVentas1.xsd" MetadataType="Schema" ID="db46d4e3-993d-4193-94b4-a6df6c4c4df8" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd4" />
+    <MetadataFile FileName="wsVentas.wsdl" MetadataType="Wsdl" ID="ae3d1afb-1da8-4d9d-8dbb-36b0bcf62df9" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?wsdl" />
+    <MetadataFile FileName="wsVentas2.xsd" MetadataType="Schema" ID="be3fff4a-b089-4b27-95d6-68bf8070957d" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd7" />
+    <MetadataFile FileName="wsVentas3.xsd" MetadataType="Schema" ID="de3db85c-4489-4c68-8158-f5aaf0ff0f81" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd8" />
+    <MetadataFile FileName="wsVentas4.xsd" MetadataType="Schema" ID="73bcaf2f-9efb-4d75-a404-1a5eb31670aa" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd5" />
+    <MetadataFile FileName="wsVentas5.xsd" MetadataType="Schema" ID="030c2071-f444-4c61-89cb-f6204f46be34" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsVentas6.xsd" MetadataType="Schema" ID="f567f71d-f39c-4582-a292-69f47214687d" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsVentas7.xsd" MetadataType="Schema" ID="e4ec9ef5-78fb-48fd-bdf4-d62b0378d12d" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsVentas8.xsd" MetadataType="Schema" ID="e157def2-9be7-45b1-9b7a-4cf5006a063f" SourceId="1" SourceUrl="http://181.188.175.133:9801/Modulos/Ventas/wsVentas.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

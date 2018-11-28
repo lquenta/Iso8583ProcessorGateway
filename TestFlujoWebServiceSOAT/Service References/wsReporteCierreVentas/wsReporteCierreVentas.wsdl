@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wsReporteCierreVentas" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesEntrada" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ClasesBase" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.ReporteCierreVentas.ClasesSalida" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Ventas.EntidadesSalida" />
+      <xsd:import schemaLocation="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv10ActualizarFechaLiquidacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv10ActualizarFechaLiquidacion" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv10ActualizarFechaLiquidacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv10ActualizarFechaLiquidacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv11ListarVentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv11ListarVentas" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv11ListarVentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv11ListarVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv12Efectivizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv12Efectivizar" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv12Efectivizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv12EfectivizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv13Remitir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv13Remitir" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv13Remitir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv13RemitirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv14Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv14Listar" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv14Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv14ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv15Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv15Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv15Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv15ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv16Revertir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv16Revertir" />
+  </wsdl:message>
+  <wsdl:message name="IwsReporteCierreVentas_Rcv16Revertir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rcv16RevertirResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IwsReporteCierreVentas">
+    <wsdl:operation name="Rcv10ActualizarFechaLiquidacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv10ActualizarFechaLiquidacion" message="tns:IwsReporteCierreVentas_Rcv10ActualizarFechaLiquidacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv10ActualizarFechaLiquidacionResponse" message="tns:IwsReporteCierreVentas_Rcv10ActualizarFechaLiquidacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rcv11ListarVentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv11ListarVentas" message="tns:IwsReporteCierreVentas_Rcv11ListarVentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv11ListarVentasResponse" message="tns:IwsReporteCierreVentas_Rcv11ListarVentas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rcv12Efectivizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv12Efectivizar" message="tns:IwsReporteCierreVentas_Rcv12Efectivizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv12EfectivizarResponse" message="tns:IwsReporteCierreVentas_Rcv12Efectivizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rcv13Remitir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv13Remitir" message="tns:IwsReporteCierreVentas_Rcv13Remitir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv13RemitirResponse" message="tns:IwsReporteCierreVentas_Rcv13Remitir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rcv14Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv14Listar" message="tns:IwsReporteCierreVentas_Rcv14Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv14ListarResponse" message="tns:IwsReporteCierreVentas_Rcv14Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rcv15Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv15Obtener" message="tns:IwsReporteCierreVentas_Rcv15Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv15ObtenerResponse" message="tns:IwsReporteCierreVentas_Rcv15Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rcv16Revertir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv16Revertir" message="tns:IwsReporteCierreVentas_Rcv16Revertir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsReporteCierreVentas/Rcv16RevertirResponse" message="tns:IwsReporteCierreVentas_Rcv16Revertir_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IwsReporteCierreVentas" type="tns:IwsReporteCierreVentas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Rcv10ActualizarFechaLiquidacion">
+      <soap:operation soapAction="http://tempuri.org/IwsReporteCierreVentas/Rcv10ActualizarFechaLiquidacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rcv11ListarVentas">
+      <soap:operation soapAction="http://tempuri.org/IwsReporteCierreVentas/Rcv11ListarVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rcv12Efectivizar">
+      <soap:operation soapAction="http://tempuri.org/IwsReporteCierreVentas/Rcv12Efectivizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rcv13Remitir">
+      <soap:operation soapAction="http://tempuri.org/IwsReporteCierreVentas/Rcv13Remitir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rcv14Listar">
+      <soap:operation soapAction="http://tempuri.org/IwsReporteCierreVentas/Rcv14Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rcv15Obtener">
+      <soap:operation soapAction="http://tempuri.org/IwsReporteCierreVentas/Rcv15Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rcv16Revertir">
+      <soap:operation soapAction="http://tempuri.org/IwsReporteCierreVentas/Rcv16Revertir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsReporteCierreVentas">
+    <wsdl:port name="BasicHttpBinding_IwsReporteCierreVentas" binding="tns:BasicHttpBinding_IwsReporteCierreVentas">
+      <soap:address location="http://181.188.175.133:9801/Modulos/ReporteCierreVentas/wsReporteCierreVentas.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
