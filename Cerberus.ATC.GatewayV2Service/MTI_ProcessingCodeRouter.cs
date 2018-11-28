@@ -6,6 +6,7 @@ using BIM_ISO8583.NET;
 using Cerberus.ATC.GatewayV2Service.wsParametricas;
 using Cerberus.ATC.GatewayV2Service.wsSeguridad;
 using Cerberus.ATC.GatewayV2Service.wsVentas;
+using NLog;
 
 namespace Cerberus.ATC.GatewayV2Service
 {
@@ -26,6 +27,7 @@ namespace Cerberus.ATC.GatewayV2Service
 
     class SOATProcessor
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         string MsgReq { get; set; }
         string[] ParsedMsgReq { get; set; }
         string FlagMensaje { get; set; }
@@ -41,6 +43,7 @@ namespace Cerberus.ATC.GatewayV2Service
 
         public string ProcesarMensaje()
         {
+            logger.Info("Mensaje Recibido ISO a procesar:"+ MsgReq);
             string resMensaje = "";
             ISO8583 msgIso8583 = new ISO8583();
             string[] DE = { };
@@ -49,20 +52,24 @@ namespace Cerberus.ATC.GatewayV2Service
             {
                 case "010000": //autenticacion
                     FlagMensaje = "AUT_REQ";
+                    logger.Info("Metodo de autenticacion invocado...");
                     string usuario = ParsedMsgReq[62].Split('/')[0].Trim();
                     string password = ParsedMsgReq[62].Split('/')[1].Trim();
                     string ip = ParsedMsgReq[63].Trim();
+                    logger.Info(String.Format("Parametros:usuario:{0},password:{1},ip:{2}",usuario,password,ip)); 
                     resMensaje=Autenticacion(usuario, password, ip);
                     break;
                 case "020000": //validacion de placa
                     FlagMensaje = "VAL_REQ";
+                    logger.Info("Metodo de Validacion de Placa invocado...");
                     string token = ParsedMsgReq[62].Trim();
                     string placa = ParsedMsgReq[63].Trim();
+                    logger.Info(String.Format("Parametros:token:{0},placa:{1}", token, placa));
                     resMensaje = ValidacionPlaca(token, placa);
                     break;
                 case "040000": //enrolado y calculo de prima
                     FlagMensaje = "ENROL_REQ";
-                   
+                    logger.Info("Calculo de prima con placa enrolada...");
                     MTI = "0110";
                     DE[3] = "030000";
                     DE[4] = "000000010000"; //PRIMA A COBRAR en este caso 100.00 Bs
@@ -72,7 +79,7 @@ namespace Cerberus.ATC.GatewayV2Service
                     break;
                 case "050000": //notificacion  de cobro de prima
                     FlagMensaje = "NOTIF_REQ";
-                    
+                    logger.Info("Notificacion de cobro de prima...");
                     MTI = "0210";
                     DE[3] = "050000";
                     DE[39]= "00"; //CODIGO DE RESPUESTA , 00 EXITOSO, 01 ERROR
@@ -86,6 +93,7 @@ namespace Cerberus.ATC.GatewayV2Service
                     break;
                 case "030000": //vendible y calculo de prima
                     FlagMensaje = "CALC_REQ";
+                    logger.Info("Calculo de prima con placa nueva...");
                     MTI = "0110";
                     DE[3] = "040000";
                     DE[4] = "000000010000"; //PRIMA A COBRAR en este caso 100.00 Bs
@@ -94,6 +102,7 @@ namespace Cerberus.ATC.GatewayV2Service
                     break;
                 case "060000": //solicitud de listado de venta
                     FlagMensaje = "LISTA_REQ";
+                    logger.Info("Solicitud de listado de venta");
                     MTI = "0210";
                     DE[3] = "060000";
                     DE[39] = "00"; //CODIGO DE RESPUESTA , 00 EXITOSO, 01 ERROR
@@ -103,6 +112,7 @@ namespace Cerberus.ATC.GatewayV2Service
                     break;
                 case "070000": //solicitud de factura
                     FlagMensaje = "FACT_REQ";
+                    logger.Info("Solicitud factura");
                     MTI = "0210";
                     DE[3] = "070000";
                     DE[39] = "00"; //CODIGO DE RESPUESTA , 00 EXITOSO, 01 ERROR
@@ -132,7 +142,9 @@ namespace Cerberus.ATC.GatewayV2Service
             reqCEVen02ObtenerPrima.SoatVentaVendedor = "EDWIN";
             reqCEVen02ObtenerPrima.Usuario = "EDWIN";
             reqCEVen02ObtenerPrima.VehiPlaca = placa;
+            logger.Info("llamada metodo Ven02ObtenerPrima");
             CSVen02ObtenerPrima resCSVen02ObtenerPrima = client.Ven02ObtenerPrima(reqCEVen02ObtenerPrima);
+            logger.Info("Respuesta metodo Ven02ObtenerPrima"+resCSVen02ObtenerPrima.Mensaje);
             if (resCSVen02ObtenerPrima.Exito)
             {
                 string[] messageRespuesta = { };
@@ -144,6 +156,7 @@ namespace Cerberus.ATC.GatewayV2Service
 
 
                 resMensaje = msgIso8583.Build(messageRespuesta, MTI);
+                logger.Info("mensaje enviado:"+resMensaje);
             }
             return resMensaje;
 
@@ -165,8 +178,10 @@ namespace Cerberus.ATC.GatewayV2Service
                 reqCeVen01ValidarVendibleYObtenerDatos.SoatVentaVendedor = "EDWIN"; //preguntar
                 reqCeVen01ValidarVendibleYObtenerDatos.Usuario = "EDWIN"; //preguntar
                 reqCeVen01ValidarVendibleYObtenerDatos.VehiPlaca = placa;
+                logger.Info("llamada metodo Ven01ValidarVendibleYObtenerDatos");
                 CSVen01ValidarVendibleYObtenerDatos resCsVen01ValidarVendibleYObtenerDatos =
                     client.Ven01ValidarVendibleYObtenerDatos(reqCeVen01ValidarVendibleYObtenerDatos);
+                logger.Info("Respuesta metodo Ven01ValidarVendibleYObtenerDatos" + resCsVen01ValidarVendibleYObtenerDatos.Mensaje);
                 if (resCsVen01ValidarVendibleYObtenerDatos.Exito)
                 {
                     if (resCsVen01ValidarVendibleYObtenerDatos.oSoatDatosIniciales == null) //es vendible pero no esta enrolado
@@ -199,12 +214,14 @@ namespace Cerberus.ATC.GatewayV2Service
             }
             catch (Exception ex)
             {
+                logger.Error("Error metodo Ven01ValidarVendibleYObtenerDatos,detalle:"+ex.Message + ex.InnerException+ ex.StackTrace);
                 string[] messageRespuesta = { };
                 MTI = "0110";
                 messageRespuesta[3] = "020000";
                 messageRespuesta[39] = "99"; //CODIGO DE RESPUESTA,00=ENROLADO Y SI VENDIBLE,10= NO ENROLADO PERO SI VENDIBLE , 01 NO VENDIBLE, 99 ERROR
                 resMensaje = msgIso8583.Build(messageRespuesta, MTI);
             }
+            logger.Info("mensaje enviado:" + resMensaje);
             return resMensaje;
         }
         string Autenticacion(string usuario,string password,string ip)
@@ -225,8 +242,9 @@ namespace Cerberus.ATC.GatewayV2Service
             };
             try
             {
-
+                logger.Info("llamada metodo Seg01Autenticacion");
                 CSSeg01Autenticacion res = client.Seg01Autenticacion(oCeSeg01Autenticacion);
+                logger.Info("Respuesta metodo Seg01Autenticacion" + res.Mensaje);
                 if (res.Exito)
                 {
                     token = res.SeguridadToken;
@@ -236,7 +254,9 @@ namespace Cerberus.ATC.GatewayV2Service
                     reqParObtenerDepartamentos.SeguridadToken = token;
                     reqParObtenerDepartamentos.SoatTIntermediarioFk = 0;
                     reqParObtenerDepartamentos.Usuario = "EDWIN";
+                    logger.Info("llamada metodo ParObtenerDepartamentos");
                     CSParObtenerDepartamentos resParObtenerDepartamentos = clientParametricasClient.ParObtenerDepartamentos(reqParObtenerDepartamentos);
+                    logger.Info("Respuesta metodo ParObtenerDepartamentos" + resParObtenerDepartamentos.Mensaje);
                     if (resParObtenerDepartamentos.Exito)
                     {
                         string parametrosRes = "";
@@ -249,8 +269,10 @@ namespace Cerberus.ATC.GatewayV2Service
                         reqCeParObtenerVehiculoUsos.SeguridadToken = token;
                         reqCeParObtenerVehiculoUsos.SoatTIntermediarioFk = 0;
                         reqCeParObtenerVehiculoUsos.Usuario = "EDWIN";
+                        logger.Info("llamada metodo ParObtenerVehiculoUsos");
                         CSParObtenerVehiculoUsos resCsParObtenerVehiculoUsos =
                             clientParametricasClient.ParObtenerVehiculoUsos(reqCeParObtenerVehiculoUsos);
+                        logger.Info("Respuesta metodo ParObtenerVehiculoUsos" + resCsParObtenerVehiculoUsos.Mensaje);
                         if (resCsParObtenerVehiculoUsos.Exito)
                         {
                             foreach (var vehiUso in resCsParObtenerVehiculoUsos.lVehiculoUso)
@@ -262,8 +284,10 @@ namespace Cerberus.ATC.GatewayV2Service
                             reqCeParObtenerVehiculoTipos.SeguridadToken = token;
                             reqCeParObtenerVehiculoTipos.SoatTIntermediarioFk = 0;
                             reqCeParObtenerVehiculoTipos.Usuario = "EDWIN";
+                            logger.Info("llamada metodo ParObtenerVehiculoTipos");
                             CSParObtenerVehiculoTipos resCsParObtenerVehiculoTipos =
                                 clientParametricasClient.ParObtenerVehiculoTipos(reqCeParObtenerVehiculoTipos);
+                            logger.Info("Respuesta metodo ParObtenerVehiculoTipos" + resCsParObtenerVehiculoTipos.Mensaje);
                             if (resCsParObtenerVehiculoTipos.Exito)
                             {
                                 foreach (var tipo in resCsParObtenerVehiculoTipos.lVehiculoTipo)
@@ -299,6 +323,7 @@ namespace Cerberus.ATC.GatewayV2Service
             }
             catch (Exception ex)
             {
+                logger.Error("Error metodo Autenticacion,detalle:" + ex.Message + ex.InnerException + ex.StackTrace);
                 MTI = "0110";
                 string[] messageRespuesta = { };
                 messageRespuesta[3] = "010000";
@@ -306,6 +331,7 @@ namespace Cerberus.ATC.GatewayV2Service
                 resMensaje = msgIso8583.Build(messageRespuesta, MTI);
                 
             }
+            logger.Info("mensaje enviado:" + resMensaje);
             return resMensaje;
         }
     }
