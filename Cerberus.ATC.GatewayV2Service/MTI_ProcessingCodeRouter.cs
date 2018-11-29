@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BIM_ISO8583.NET;
 using Cerberus.ATC.GatewayV2Service.wsParametricas;
 using Cerberus.ATC.GatewayV2Service.wsSeguridad;
 using Cerberus.ATC.GatewayV2Service.wsVentas;
@@ -12,10 +11,25 @@ namespace Cerberus.ATC.GatewayV2Service
 {
     public class MTI_ProcessingCodeRouter
     {
-        public static void ProcesarMensaje(Byte[] byteRequest,out byte[] byteResponse)
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+        public static void ProcesarMensaje(byte[] byteRequest,out byte[] byteResponse)
         {
             byteResponse = new byte[1];
+            logger.Trace("len mensaje:" + byteRequest.Length);
+            byte[] newArray = new byte[byteRequest.Length - 23];
+            Buffer.BlockCopy(byteRequest, 23, newArray, 0, newArray.Length);
+
+            int i = newArray.Length - 1;
+            while (newArray[i] == 0)
+                --i;
+            // now foo[i] is the last non-zero byte
+            byte[] bar = new byte[i + 1];
+            Array.Copy(newArray, bar, i + 1);
+
             string mstrMessage = Encoding.ASCII.GetString(byteRequest, 0, byteRequest.Length);
+            logger.Info("Mensaje Recibido ISO a procesar:" + mstrMessage);
+            mstrMessage = Encoding.ASCII.GetString(bar, 0, bar.Length);
+             logger.Info("Mensaje Recibido ISO a procesar:" + mstrMessage);
             SOATProcessor sp = new SOATProcessor(mstrMessage);
             byteResponse = Encoding.ASCII.GetBytes(sp.ProcesarMensaje());
 
@@ -35,15 +49,24 @@ namespace Cerberus.ATC.GatewayV2Service
 
         public SOATProcessor(string inMsgReq)
         {
-            MsgReq = inMsgReq;
             ISO8583 msgIso8583 = new ISO8583();
-            ParsedMsgReq = msgIso8583.Parse(MsgReq);
-            MTI = ParsedMsgReq[0];
+            try
+            {
+                ParsedMsgReq = msgIso8583.Parse(inMsgReq);
+                MsgReq = inMsgReq;
+                MTI = ParsedMsgReq[0];
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error en parseado de la trama ISO:" + inMsgReq + " Detalle del error:" + ex.Message + ex.InnerException + ex.StackTrace);
+                
+            }
+           
         }
 
         public string ProcesarMensaje()
         {
-            logger.Info("Mensaje Recibido ISO a procesar:"+ MsgReq);
+           
             string resMensaje = "";
             ISO8583 msgIso8583 = new ISO8583();
             string[] DE = { };
@@ -147,7 +170,7 @@ namespace Cerberus.ATC.GatewayV2Service
             logger.Info("Respuesta metodo Ven02ObtenerPrima"+resCSVen02ObtenerPrima.Mensaje);
             if (resCSVen02ObtenerPrima.Exito)
             {
-                string[] messageRespuesta = { };
+                string[] messageRespuesta = new string[130];
                 MTI = "0110";
                 messageRespuesta[3] = "030000";
                 messageRespuesta[4] = resCSVen02ObtenerPrima.Prima.ToString();
@@ -171,7 +194,7 @@ namespace Cerberus.ATC.GatewayV2Service
                 
                 CEVen01ValidarVendibleYObtenerDatos reqCeVen01ValidarVendibleYObtenerDatos = new CEVen01ValidarVendibleYObtenerDatos();
                 reqCeVen01ValidarVendibleYObtenerDatos.SoatVentaCajero = "EDWIN"; //preguntar
-                reqCeVen01ValidarVendibleYObtenerDatos.SeguridadToken = Int32.Parse(token);
+                reqCeVen01ValidarVendibleYObtenerDatos.SeguridadToken = int.Parse(token);
                 reqCeVen01ValidarVendibleYObtenerDatos.SoatTIntermediarioFk = 0; //siempre 0
                 reqCeVen01ValidarVendibleYObtenerDatos.SoatTParGestionFk = 2018; //preguntar
                 reqCeVen01ValidarVendibleYObtenerDatos.SoatTParVentaCanalFk = 30; //preguntar
@@ -186,7 +209,7 @@ namespace Cerberus.ATC.GatewayV2Service
                 {
                     if (resCsVen01ValidarVendibleYObtenerDatos.oSoatDatosIniciales == null) //es vendible pero no esta enrolado
                     {
-                        string[] messageRespuesta = { };
+                        string[] messageRespuesta = new string[130];
                         MTI = "0110";
                         messageRespuesta[3] = "020000";
                         messageRespuesta[39] = "10"; //CODIGO DE RESPUESTA,00=ENROLADO Y SI VENDIBLE,10= NO ENROLADO PERO SI VENDIBLE , 01 NO VENDIBLE
@@ -195,7 +218,7 @@ namespace Cerberus.ATC.GatewayV2Service
                     else //es vendible y esta enrolado
                     {
                         CSoatDatosIniciales datosIniciales = resCsVen01ValidarVendibleYObtenerDatos.oSoatDatosIniciales;
-                        string[] messageRespuesta = { };
+                        string[] messageRespuesta = new string[130];
                         MTI = "0110";
                         messageRespuesta[3] = "030000";
                         messageRespuesta[39] = "00"; //CODIGO DE RESPUESTA,00=ENROLADO Y SI VENDIBLE,10= NO ENROLADO PERO SI VENDIBLE , 01 NO VENDIBLE
@@ -205,7 +228,7 @@ namespace Cerberus.ATC.GatewayV2Service
                 }
                 else //no es vendible
                 {
-                    string[] messageRespuesta = { };
+                    string[] messageRespuesta = new string[130];
                     MTI = "0110";
                     messageRespuesta[3] = "020000";
                     messageRespuesta[39] = "01"; //CODIGO DE RESPUESTA,00=ENROLADO Y SI VENDIBLE,10= NO ENROLADO PERO SI VENDIBLE , 01 NO VENDIBLE
@@ -215,7 +238,7 @@ namespace Cerberus.ATC.GatewayV2Service
             catch (Exception ex)
             {
                 logger.Error("Error metodo Ven01ValidarVendibleYObtenerDatos,detalle:"+ex.Message + ex.InnerException+ ex.StackTrace);
-                string[] messageRespuesta = { };
+                string[] messageRespuesta = new string[130];
                 MTI = "0110";
                 messageRespuesta[3] = "020000";
                 messageRespuesta[39] = "99"; //CODIGO DE RESPUESTA,00=ENROLADO Y SI VENDIBLE,10= NO ENROLADO PERO SI VENDIBLE , 01 NO VENDIBLE, 99 ERROR
@@ -295,7 +318,7 @@ namespace Cerberus.ATC.GatewayV2Service
                                     parametrosRes += String.Format(@"V|{0}|{1}\", tipo.Secuencial, tipo.Descripcion);
                                 }
                                 MTI = "0110";
-                                string[] messageRespuesta = { };
+                                string[] messageRespuesta = new string[130]; ;
                                 messageRespuesta[3] = "010000";
                                 messageRespuesta[39] = "00";
                                 messageRespuesta[62] = token.ToString();
@@ -325,7 +348,7 @@ namespace Cerberus.ATC.GatewayV2Service
             {
                 logger.Error("Error metodo Autenticacion,detalle:" + ex.Message + ex.InnerException + ex.StackTrace);
                 MTI = "0110";
-                string[] messageRespuesta = { };
+                string[] messageRespuesta = new string[130]; ;
                 messageRespuesta[3] = "010000";
                 messageRespuesta[39] = "01"; //01 error 00 exito
                 resMensaje = msgIso8583.Build(messageRespuesta, MTI);

@@ -8,6 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using NLog;
 
 namespace Cerberus.ATC.GatewayV2Service
 {
@@ -34,6 +35,7 @@ namespace Cerberus.ATC.GatewayV2Service
         private StreamWriter m_cfgFile = null;
         private DateTime m_lastReceiveDateTime;
         private DateTime m_currentReceiveDateTime;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Client Socket Listener Constructor.
@@ -111,22 +113,29 @@ namespace Cerberus.ATC.GatewayV2Service
         /// </summary>
         public void StopSocketListener()
         {
-            if (m_clientSocket != null)
+            try
             {
+                if (m_clientSocket == null) return;
                 m_stopClient = true;
                 m_clientSocket.Close();
 
                 // Wait for one second for the the thread to stop.
+                if (m_clientListenerThread == null) return;
                 m_clientListenerThread.Join(1000);
 
                 // If still alive; Get rid of the thread.
-                if (m_clientListenerThread.IsAlive)
+                /*if (m_clientListenerThread.IsAlive)
                 {
                     m_clientListenerThread.Abort();
-                }
+                }*/
                 m_clientListenerThread = null;
                 m_clientSocket = null;
                 m_markedForDeletion = true;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error en stop Listener:"+ex.Message+ex.InnerException+ex.StackTrace);
+                //throw;
             }
         }
 
@@ -154,7 +163,6 @@ namespace Cerberus.ATC.GatewayV2Service
         /// <param name="size"></param>
         private byte[] ParseReceiveBuffer(Byte[] byteBuffer, int size)
         {
-            MTI_ProcessingCodeRouter mtiRouter = new MTI_ProcessingCodeRouter();
             
             //string data = Encoding.ASCII.GetString(byteBuffer, 0, size);
             //GetWayServicePoint.FileLog("mensaje recibido");

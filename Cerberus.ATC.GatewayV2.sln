@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlujoWebServiceSOAT", "TestFlujoWebServiceSOAT\TestFlujoWebServiceSOAT.csproj", "{A59CEF25-0FD1-4BF3-AD99-E376688F587E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cerberus.ATC.GatewayV2.Service", "Cerberus.ATC.GatewayV2Service\Cerberus.ATC.GatewayV2.Service.csproj", "{12ABC5B7-B812-4F18-AE6C-8BF3CC593E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISOLab", "ISOLab\ISOLab.csproj", "{08B9EB30-DF14-421C-8587-3494E7A61FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPTester", "TCPTester\TCPTester.csproj", "{0E6F4DE2-D055-4E41-9049-F2F2B0B43244}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +25,14 @@ Global
 		{12ABC5B7-B812-4F18-AE6C-8BF3CC593E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12ABC5B7-B812-4F18-AE6C-8BF3CC593E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12ABC5B7-B812-4F18-AE6C-8BF3CC593E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B9EB30-DF14-421C-8587-3494E7A61FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B9EB30-DF14-421C-8587-3494E7A61FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B9EB30-DF14-421C-8587-3494E7A61FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B9EB30-DF14-421C-8587-3494E7A61FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6F4DE2-D055-4E41-9049-F2F2B0B43244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6F4DE2-D055-4E41-9049-F2F2B0B43244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6F4DE2-D055-4E41-9049-F2F2B0B43244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6F4DE2-D055-4E41-9049-F2F2B0B43244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
