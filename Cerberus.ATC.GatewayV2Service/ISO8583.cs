@@ -539,18 +539,18 @@ namespace Cerberus.ATC.GatewayV2Service
             //--------------------------
             FieldNo = 63;
 
-            if (de1Binary.Substring(FieldNo - 1, 1) == "1")
+            /*if (de1Binary.Substring(FieldNo - 1, 1) == "1")
             {
                 myPos += myLenght; len = 3;
-                myLenght = Convert.ToInt16(ISOmsg.Substring(myPos, len)); myPos += len;
-                DE[FieldNo] = ISOmsg.Substring(myPos, myLenght);
+                //myLenght = Convert.ToInt16(ISOmsg.Substring(myPos, len)); myPos += len;
+                //DE[FieldNo] = ISOmsg.Substring(myPos, myLenght);
             }
-
+            */
             //--------------------------
             FieldNo = 64;
-
+            /*
             if (de1Binary.Substring(FieldNo - 1, 1) == "1") { myPos += myLenght; myLenght = 4; DE[FieldNo] = ISOmsg.Substring(myPos, myLenght); }
-
+            */
             /*
             for (int I = 0; I <= 64; I++)
             {
