@@ -8,9 +8,41 @@ namespace ISOLab
 {
     class Program
     {
+        public static byte[] ConvertLiteralByteToString(string str)
+        {
+            char[] arrC = str.ToCharArray();
+            List<byte> lstByte = new List<byte>();
+            byte[] res = new byte[1024];
+            foreach (char c in arrC)
+            {
+                if (Char.IsDigit(c))
+                {
+                    int convertC = int.Parse(c.ToString());
+                    lstByte.Add(
+                        BitConverter.GetBytes(convertC)[0]
+                        );
+
+                }
+            }
+            return (lstByte.ToArray());
+        }
+
         static void Main(string[] args)
         {
+            ISO8583 isolocal = new ISO8583();
+            string[] DE = new string[130];
+            string MTI = "0110";
+            DE[3] = "010000";
+            DE[4] = "000000010000";
+            DE[39] = "010000";
+            DE[62] = "5656565656"; //TOKEN
+            DE[63] = @"D|BN|BENI\D|CB|COCHABAMBA\D|CH|CHUQUISACA\D|LP|LA PAZ\D|OR|ORURO\D|PN|PANDO\D|PT|POTOSI\D|SC|SANTA CRUZ\D|TJ|TARIJA\U|1|PARTICULAR\U|2|PUBLICO\U|3|EJERCITO\U|4|POLICIA\U|5|OFICIAL\V|1|MOTOCICLETA\V|2|AUTOMOVIL\V|3|JEEP\V|4|CAMIONETA\V|5|VAGONETA\V|6|MICROBUS\V|7|COLECTIVO\V|8|OMNIBUS/FLOTA(MAS DE 39 oc)\V|9|TRACTO CAMION\V|10|MINIBUS(8 OCUPANTES)\V|11|MINIBUS(11 OCUPANTES)\V|12|MINIBUS(15 OCUPANTES)\V|13|CAMION(3 OCUPANTES)\V|14|CAMION(18 OCUPANTES)\V|15|CAMION(25 OCUPANTES)\";
+
+            string nonASCII = "";
+            string headerHex = "00d06000000233";
+            string resMensaje = isolocal.BuildCustomISO(DE, MTI,out nonASCII);
            
+            string finalMensaje = headerHex + resMensaje;
 
 
             byte[] message = new byte[] {
