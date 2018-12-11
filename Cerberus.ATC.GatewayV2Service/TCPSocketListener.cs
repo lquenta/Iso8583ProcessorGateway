@@ -89,17 +89,45 @@ namespace Cerberus.ATC.GatewayV2Service
             {
                 try
                 {
-                    size = m_clientSocket.Receive(byteBuffer);
-                    //EventLog.WriteEntry("GetWayServiceNuevoLP", "ip:"+ ((IPEndPoint)m_clientSocket.LocalEndPoint).Address.ToString()+",port"+ ((IPEndPoint)m_clientSocket.LocalEndPoint).Port.ToString());
+                    //if (byteBuffer.Length > 0)
+                    {
+                        size = m_clientSocket.Receive(byteBuffer);
+                        m_currentReceiveDateTime = DateTime.Now;
+                        byte[] response = ParseReceiveBuffer(byteBuffer, size);
+                        m_clientSocket.Send(response);
+                    }
+                   // size = m_clientSocket.Receive(byteBuffer);
+                    //m_currentReceiveDateTime = DateTime.Now;
 
-                    m_currentReceiveDateTime = DateTime.Now;
-                    byte[] response = ParseReceiveBuffer(byteBuffer, size);
-                    m_clientSocket.Send(response);
+                    //byte[] echo = byteBuffer;
+                    
+                    //byte[] response = ParseReceiveBuffer(byteBuffer, size);
+                    //m_clientSocket.Send(response);
+                    /*byte[] longitudSalida = new byte[] { 35, 11 };
+                    byte[] longitudSalida3 = Encoding.ASCII.GetBytes((size + 6).ToString());
+                    byte[] longitudSalida1 = new byte[] { byteBuffer[0], byteBuffer[1] };
+                    byte[] transaccionFinanciera = new byte[] { byteBuffer[2] };
+                    byte[] destinoNII = new byte[] { byteBuffer[3], byteBuffer[4] };
+                    byte[] origen = new byte[] { byteBuffer[5], byteBuffer[6] };
+                    byte[] responseFinal = longitudSalida3.Concat(transaccionFinanciera).Concat(destinoNII).Concat(origen).Concat(response).ToArray();
+                    //byte[] responseFinal = longitudSalida3.Concat(transaccionFinanciera).Concat(origen).Concat(destinoNII).Concat(response).ToArray();
+                    logger.Info("Mensaje serializado de respuesta enviado" + BitConverter.ToString(responseFinal));
+                    //logger.Info("Echo:" + BitConverter.ToString(echo));
+                    //m_clientSocket.Send(echo);
+                    string messageHex = "00d060000002330110200000000200000601000030300013313931393139313931393139310171447c424e7c42454e495c447c43427c434f43484142414d42415c447c43487c434855515549534143415c447c4c507c4c412050415a5c477c323031387c323031395c477c323031397c323031395c557c317c504152544943554c41525c557c327c5055424c49434f5c557c337c454a45524349544f5c557c347c504f4c494349415c557c357c4f46494349414c5c567c317c4d4f544f4349434c4554415c567c327c4155544f4d4f56494c";
+                    // Translate the passed message into ASCII and store it as a byte array.
+                    Byte[] responseWPOS = new Byte[1024];
+                    responseWPOS = System.Runtime.Remoting.Metadata.W3cXsd2001.SoapHexBinary.Parse(messageHex).Value;
+
+                    //m_clientSocket.Send(responseWPOS);
+                    m_clientSocket.Send(responseFinal);
                     //GetWayServicePoint.FileLog("mensaje enviado");
                     //EventLog.WriteEntry("GetWayServiceNuevoLP", "mensaje enviado");
+                      */
                 }
                 catch (SocketException se)
                 {
+                    logger.Error("Error Socket en el envio:" + se.Message + se.InnerException + se.StackTrace);
                     m_stopClient = true;
                     m_markedForDeletion = true;
                 }
@@ -124,10 +152,10 @@ namespace Cerberus.ATC.GatewayV2Service
                 m_clientListenerThread.Join(1000);
 
                 // If still alive; Get rid of the thread.
-                /*if (m_clientListenerThread.IsAlive)
+                if (m_clientListenerThread.IsAlive)
                 {
                     m_clientListenerThread.Abort();
-                }*/
+                }
                 m_clientListenerThread = null;
                 m_clientSocket = null;
                 m_markedForDeletion = true;
