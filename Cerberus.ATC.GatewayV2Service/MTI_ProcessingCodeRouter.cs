@@ -398,13 +398,19 @@ namespace Cerberus.ATC.GatewayV2Service
                     else //es vendible y esta enrolado
                     {
                         CSoatDatosIniciales datosIniciales = resCsVen01ValidarVendibleYObtenerDatos.oSoatDatosIniciales;
+                        int calculoPrima= CalculoPrima(
+                            Int32.Parse(token), datosIniciales.SoatTParDepartamentoPcFk, datosIniciales.SoatTParGestionFk,
+                            datosIniciales.SoatTParVehiculoTipoFk, datosIniciales.SoatTParVehiculoUsoFk, canalVenta,
+                            usuario, placa);
+                        if (calculoPrima <= 0)
+                        {
+                            throw new Exception("Prima no calculada,0");
+                        }
                         string[] messageRespuesta = new string[130];
                         MTI = "0110";
                         messageRespuesta[3] = "030000";
-                        messageRespuesta[4] = CalculoPrima(
-                            Int32.Parse(token),datosIniciales.SoatTParDepartamentoPcFk,datosIniciales.SoatTParGestionFk,
-                            datosIniciales.SoatTParVehiculoTipoFk, datosIniciales.SoatTParVehiculoUsoFk, canalVenta,
-                            usuario, placa).ToString().PadLeft(13,'0');
+                        messageRespuesta[4] = calculoPrima.ToString().PadLeft(13, '0');
+
                         messageRespuesta[39] = "00"; //CODIGO DE RESPUESTA,00=ENROLADO Y SI VENDIBLE,10= NO ENROLADO PERO SI VENDIBLE , 01 NO VENDIBLE
                         messageRespuesta[63] = String.Format("{0}/{1}/{2}/{3}/{4}", datosIniciales.VehiPlaca, datosIniciales.SoatTParGestionFk, datosIniciales.SoatTParVehiculoTipoFk, datosIniciales.SoatTParVehiculoUsoFk, datosIniciales.SoatTParDepartamentoPcFk);
                         resMensaje = msgIso8583.Build(messageRespuesta, MTI);
