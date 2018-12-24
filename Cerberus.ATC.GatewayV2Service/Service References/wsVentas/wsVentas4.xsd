@@ -14,17 +14,35 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CSoatDatosIniciales" nillable="true" type="tns:CSoatDatosIniciales" />
-  <xs:complexType name="CSoatDatosCompletos">
+  <xs:complexType name="CSoatDatosIntermedios">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CSoatDatosIniciales">
         <xs:sequence>
-          <xs:element minOccurs="0" name="FactNumero" type="xs:int" />
-          <xs:element minOccurs="0" name="PropCI" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="PropCelular" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropCi" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="PropDireccion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="PropNIT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropNit" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="PropTelefono" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="PropTomador" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatTParDepartamentoVtFk" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiAcople" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiAnio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiCapacidadCarga" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiChasis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiMarca" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiModelo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiMotor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSoatDatosIntermedios" nillable="true" type="tns:CSoatDatosIntermedios" />
+  <xs:complexType name="CSoatDatosCompletos">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSoatDatosIntermedios">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FactNumero" type="xs:int" />
           <xs:element minOccurs="0" name="SoatFechaCoberturaFin" type="xs:dateTime" />
           <xs:element minOccurs="0" name="SoatFechaCoberturaInicio" type="xs:dateTime" />
           <xs:element minOccurs="0" name="SoatFechaVenta" type="xs:dateTime" />
@@ -32,14 +50,6 @@
           <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
           <xs:element minOccurs="0" name="SoatQRContenido" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="SoatQRImagen" nillable="true" type="xs:base64Binary" />
-          <xs:element minOccurs="0" name="VehiAcople" type="xs:boolean" />
-          <xs:element minOccurs="0" name="VehiAnio" type="xs:int" />
-          <xs:element minOccurs="0" name="VehiCapacidadCarga" type="xs:decimal" />
-          <xs:element minOccurs="0" name="VehiChasis" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="VehiColor" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="VehiMarca" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="VehiModelo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="VehiMotor" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

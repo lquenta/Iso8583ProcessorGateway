@@ -71,13 +71,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerBancos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsParametricasUNIVIDA\TestFlujoWebServiceSOAT.wsParametricasUNIVIDA.CSParObtenerPlacasTipo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen01ValidarVendibleYObtenerDatos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen01ValidarVendibleYObtenerDatosInter.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen02ObtenerPrima.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen03EfectivizarFactCicl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen03EfectivizarFactCiclInter.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen03EfectivizarFactCiclPDF.datasource">
@@ -99,6 +111,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen06Revertir.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentasUNIVIDA\TestFlujoWebServiceSOAT.wsVentasUNIVIDA.CSVen07SolRevertir.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\wsVentasUNIVIDA\wsVentas.wsdl" />

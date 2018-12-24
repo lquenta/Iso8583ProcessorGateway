@@ -16,143 +16,171 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Ven01ValidarVendibleYObtenerDatosInter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen01ValidarVendibleYObtenerDatosInter" nillable="true" type="q3:CEVen01ValidarVendibleYObtenerDatosInter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ven01ValidarVendibleYObtenerDatosInterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven01ValidarVendibleYObtenerDatosInterResult" nillable="true" type="q4:CSVen01ValidarVendibleYObtenerDatosInter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Ven02ObtenerPrima">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen02ObtenerPrima" nillable="true" type="q3:CEVen02ObtenerPrima" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen02ObtenerPrima" nillable="true" type="q5:CEVen02ObtenerPrima" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven02ObtenerPrimaResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven02ObtenerPrimaResult" nillable="true" type="q4:CSVen02ObtenerPrima" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven02ObtenerPrimaResult" nillable="true" type="q6:CSVen02ObtenerPrima" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven03EfectivizarFactTerc">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactTerc" nillable="true" type="q5:CEVen03EfectivizarFactTerc" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactTerc" nillable="true" type="q7:CEVen03EfectivizarFactTerc" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven03EfectivizarFactTercResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactTercResult" nillable="true" type="q6:CSVen03EfectivizarFactTerc" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactTercResult" nillable="true" type="q8:CSVen03EfectivizarFactTerc" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven03EfectivizarFactTercPDF">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactTerc" nillable="true" type="q7:CEVen03EfectivizarFactTerc" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactTerc" nillable="true" type="q9:CEVen03EfectivizarFactTerc" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven03EfectivizarFactTercPDFResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactTercPDFResult" nillable="true" type="q8:CSVen03EfectivizarFactTercPDF" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactTercPDFResult" nillable="true" type="q10:CSVen03EfectivizarFactTercPDF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven03EfectivizarFactCicl">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactCicl" nillable="true" type="q9:CEVen03EfectivizarFactCicl" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactCicl" nillable="true" type="q11:CEVen03EfectivizarFactCicl" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven03EfectivizarFactCiclResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactCiclResult" nillable="true" type="q10:CSVen03EfectivizarFactCicl" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactCiclResult" nillable="true" type="q12:CSVen03EfectivizarFactCicl" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ven03EfectivizarFactCiclInter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactCiclInter" nillable="true" type="q13:CEVen03EfectivizarFactCiclInter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ven03EfectivizarFactCiclInterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactCiclInterResult" nillable="true" type="q14:CSVen03EfectivizarFactCiclInter" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven03EfectivizarFactCiclPDF">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactCicl" nillable="true" type="q11:CEVen03EfectivizarFactCicl" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen03EfectivizarFactCicl" nillable="true" type="q15:CEVen03EfectivizarFactCicl" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven03EfectivizarFactCiclPDFResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactCiclPDFResult" nillable="true" type="q12:CSVen03EfectivizarFactCiclPDF" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven03EfectivizarFactCiclPDFResult" nillable="true" type="q16:CSVen03EfectivizarFactCiclPDF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven04Listar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen04Listar" nillable="true" type="q13:CEVen04Listar" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen04Listar" nillable="true" type="q17:CEVen04Listar" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven04ListarResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven04ListarResult" nillable="true" type="q14:CSVen04Listar" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven04ListarResult" nillable="true" type="q18:CSVen04Listar" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven05Obtener">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen05Obtener" nillable="true" type="q15:CEVen05Obtener" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen05Obtener" nillable="true" type="q19:CEVen05Obtener" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven05ObtenerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven05ObtenerResult" nillable="true" type="q16:CSVen05Obtener" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven05ObtenerResult" nillable="true" type="q20:CSVen05Obtener" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven05ObtenerPDF">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen05Obtener" nillable="true" type="q17:CEVen05Obtener" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen05Obtener" nillable="true" type="q21:CEVen05Obtener" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven05ObtenerPDFResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven05ObtenerPDFResult" nillable="true" type="q18:CSVen05ObtenerPDF" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven05ObtenerPDFResult" nillable="true" type="q22:CSVen05ObtenerPDF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven06Revertir">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen06Revertir" nillable="true" type="q19:CEVen06Revertir" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen06Revertir" nillable="true" type="q23:CEVen06Revertir" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven06RevertirResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven06RevertirResult" nillable="true" type="q20:CSVen06Revertir" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven06RevertirResult" nillable="true" type="q24:CSVen06Revertir" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven07SolRevertir">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen07SolRevertir" nillable="true" type="q21:CEVen07SolRevertir" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesEntrada" minOccurs="0" name="oEVen07SolRevertir" nillable="true" type="q25:CEVen07SolRevertir" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Ven07SolRevertirResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven07SolRevertirResult" nillable="true" type="q22:CSVen07SolRevertir" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Ventas.ClasesSalida" minOccurs="0" name="Ven07SolRevertirResult" nillable="true" type="q26:CSVen07SolRevertir" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

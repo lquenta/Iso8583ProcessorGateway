@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="CSRcv15Obtener" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv15Obtener, Service References.wsReporteCierreVentas.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>TestFlujoWebServiceSOAT.wsReporteCierreVentas.CSRcv15Obtener, Service References.wsReporteCierreVentas.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

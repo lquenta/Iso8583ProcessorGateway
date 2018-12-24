@@ -22,6 +22,16 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="CSVen" nillable="true" type="tns:CSVen" />
+  <xs:complexType name="CSVen01ValidarVendibleYObtenerDatosInter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosIntermedios" nillable="true" type="q3:CSoatDatosIntermedios" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen01ValidarVendibleYObtenerDatosInter" nillable="true" type="tns:CSVen01ValidarVendibleYObtenerDatosInter" />
   <xs:complexType name="CSVen02ObtenerPrima">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CSVen">
@@ -36,7 +46,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CSVen">
         <xs:sequence>
-          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletos" nillable="true" type="q3:CSoatDatosCompletos" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletos" nillable="true" type="q4:CSoatDatosCompletos" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -47,7 +57,7 @@
       <xs:extension base="tns:CSVen">
         <xs:sequence>
           <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
-          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q4:CArchivosAdjuntos" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q5:CArchivosAdjuntos" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -57,18 +67,28 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CSVen">
         <xs:sequence>
-          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletosFactura" nillable="true" type="q5:CSoatDatosCompletosFactura" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletosFactura" nillable="true" type="q6:CSoatDatosCompletosFactura" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="CSVen03EfectivizarFactCicl" nillable="true" type="tns:CSVen03EfectivizarFactCicl" />
+  <xs:complexType name="CSVen03EfectivizarFactCiclInter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSVen">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletosFactura" nillable="true" type="q7:CSoatDatosCompletosFactura" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSVen03EfectivizarFactCiclInter" nillable="true" type="tns:CSVen03EfectivizarFactCiclInter" />
   <xs:complexType name="CSVen03EfectivizarFactCiclPDF">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CSVen">
         <xs:sequence>
           <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
-          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q6:CArchivosAdjuntos" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q8:CArchivosAdjuntos" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -78,7 +98,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CSVen">
         <xs:sequence>
-          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" minOccurs="0" name="oRcvDatosVentas" nillable="true" type="q7:CRcvDatosVentas" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.ReporteCierreVentas.Entidades" minOccurs="0" name="oRcvDatosVentas" nillable="true" type="q9:CRcvDatosVentas" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -88,7 +108,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CSVen">
         <xs:sequence>
-          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletosFactura" nillable="true" type="q8:CSoatDatosCompletosFactura" />
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BibliotecaCoreSoat.Modulos.Ventas.Entidades" minOccurs="0" name="oSoatDatosCompletosFactura" nillable="true" type="q10:CSoatDatosCompletosFactura" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -99,7 +119,7 @@
       <xs:extension base="tns:CSVen">
         <xs:sequence>
           <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
-          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q9:CArchivosAdjuntos" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/UVNetTransversal.AgenteServicios.Almacenamiento.Archivos.EntidadesSalida" minOccurs="0" name="oArchivosAdjuntos" nillable="true" type="q11:CArchivosAdjuntos" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

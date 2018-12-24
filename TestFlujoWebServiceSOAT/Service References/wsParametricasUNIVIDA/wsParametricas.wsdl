@@ -59,6 +59,18 @@
   <wsdl:message name="IwsParametricas_ParObtenerVentaCanal_OutputMessage">
     <wsdl:part name="parameters" element="tns:ParObtenerVentaCanalResponse" />
   </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerBancos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerBancos" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerBancos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerBancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerPlacasTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerPlacasTipo" />
+  </wsdl:message>
+  <wsdl:message name="IwsParametricas_ParObtenerPlacasTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParObtenerPlacasTipoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IwsParametricas">
     <wsdl:operation name="ParObtenerPrimas">
       <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerPrimas" message="tns:IwsParametricas_ParObtenerPrimas_InputMessage" />
@@ -91,6 +103,14 @@
     <wsdl:operation name="ParObtenerVentaCanal">
       <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerVentaCanal" message="tns:IwsParametricas_ParObtenerVentaCanal_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerVentaCanalResponse" message="tns:IwsParametricas_ParObtenerVentaCanal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerBancos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerBancos" message="tns:IwsParametricas_ParObtenerBancos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerBancosResponse" message="tns:IwsParametricas_ParObtenerBancos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerPlacasTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerPlacasTipo" message="tns:IwsParametricas_ParObtenerPlacasTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsParametricas/ParObtenerPlacasTipoResponse" message="tns:IwsParametricas_ParObtenerPlacasTipo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IwsParametricas" type="tns:IwsParametricas">
@@ -160,6 +180,24 @@
     </wsdl:operation>
     <wsdl:operation name="ParObtenerVentaCanal">
       <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerVentaCanal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerBancos">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerBancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParObtenerPlacasTipo">
+      <soap:operation soapAction="http://tempuri.org/IwsParametricas/ParObtenerPlacasTipo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

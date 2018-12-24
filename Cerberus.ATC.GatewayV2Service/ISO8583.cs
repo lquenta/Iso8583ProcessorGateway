@@ -48,6 +48,98 @@ namespace Cerberus.ATC.GatewayV2Service
             DEFixLen[98] = -25; DEFixLen[101] = -17; DEFixLen[128] = -16;
 
         }
+        public string BuildCustomISO(string[] DE, string MTI, out string nonASCIISection)
+        {
+            nonASCIISection = "";
+            string newISO = MTI;
+
+
+            string newDE1 = "";
+            for (int I = 2; I <= 64; I++) { if (DE[I] != null) { newDE1 += "1"; } else { newDE1 += "0"; } }
+
+
+            string newDE2 = "";
+            for (int I = 65; I <= 128; I++) { if (DE[I] != null) { newDE2 += "1"; } else { newDE2 += "0"; } }
+
+            if (newDE2 == "0000000000000000000000000000000000000000000000000000000000000000")
+            { newDE1 = "0" + newDE1; }
+            else { newDE1 = "1" + newDE1; }
+
+
+
+            string DE1Hex = String.Format("{0:X1}", Convert.ToInt64(newDE1, 2));
+            DE1Hex = DE1Hex.PadLeft(16, '0'); //Pad-Left
+            DE[0] = DE1Hex;
+
+            string DE2Hex = String.Format("{0:X1}", Convert.ToInt64(newDE2, 2));
+            DE2Hex = DE2Hex.PadLeft(16, '0'); //Pad-Left
+            DE[1] = DE2Hex;
+
+            if (DE2Hex == "0000000000000000") DE[1] = null;
+
+
+
+            for (int I = 0; I <= 128; I++)
+            {
+                if (I == 62)
+                {
+                    nonASCIISection = newISO;
+                }
+                if (DE[I] != null)
+                {
+                    if (DEVarLen[I] < 1)
+                    {
+
+                        if (DEFixLen[I] < 0)
+                        {
+                            if (I == 39)
+                            {
+                                string BMPadded = DE[I].PadRight(Math.Abs(DEFixLen[I]), ' ');
+                                string sBM = BMPadded.Substring(0, Math.Abs(DEFixLen[I]));
+                                newISO += BitConverter.ToString(Encoding.ASCII.GetBytes(sBM)).Replace("-", "");
+                            }
+                            else
+                            {
+                                string BMPadded = DE[I].PadRight(Math.Abs(DEFixLen[I]), ' ');
+                                string sBM = BMPadded.Substring(0, Math.Abs(DEFixLen[I]));
+
+                                newISO += sBM;
+                            }
+
+                        }
+                        else
+                        {
+                            string BMPadded = DE[I].PadLeft(DEFixLen[I], '0');
+                            string sBM = BMPadded.Substring(BMPadded.Length - Math.Abs(DEFixLen[I]), Math.Abs(DEFixLen[I]));
+                            newISO += sBM;
+                        }
+                    }
+                    else
+                    {
+                        if (I == 62 || I == 63)
+                        {
+                            //convertir a hexa el contenido
+                            //dejar en decimal el length
+                            string lenI = DE[I].Length.ToString("0000");
+                            string paddedlenI = lenI.PadLeft(DEVarLen[I], '0');
+                            newISO += (paddedlenI + BitConverter.ToString(Encoding.ASCII.GetBytes(DE[I])).Replace("-", ""));
+                        }
+                        else
+                        {
+                            string li = DE[I].Length.ToString();
+                            string paddedli = li.PadLeft(DEVarLen[I], '0');
+                            newISO += (paddedli + DE[I]);
+                        }
+
+                    }
+                }
+            }
+
+            return newISO;
+
+
+        }
+
         public string Build(string[] DE, string MTI)
         {
             string newISO = MTI;
@@ -539,18 +631,18 @@ namespace Cerberus.ATC.GatewayV2Service
             //--------------------------
             FieldNo = 63;
 
-            if (de1Binary.Substring(FieldNo - 1, 1) == "1")
+            /*if (de1Binary.Substring(FieldNo - 1, 1) == "1")
             {
                 myPos += myLenght; len = 3;
-                myLenght = Convert.ToInt16(ISOmsg.Substring(myPos, len)); myPos += len;
-                DE[FieldNo] = ISOmsg.Substring(myPos, myLenght);
+                //myLenght = Convert.ToInt16(ISOmsg.Substring(myPos, len)); myPos += len;
+                //DE[FieldNo] = ISOmsg.Substring(myPos, myLenght);
             }
-
+            */
             //--------------------------
             FieldNo = 64;
-
+            /*
             if (de1Binary.Substring(FieldNo - 1, 1) == "1") { myPos += myLenght; myLenght = 4; DE[FieldNo] = ISOmsg.Substring(myPos, myLenght); }
-
+            */
             /*
             for (int I = 0; I <= 64; I++)
             {

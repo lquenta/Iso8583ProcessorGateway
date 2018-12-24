@@ -110,4 +110,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CBancos" nillable="true" type="tns:CBancos" />
+  <xs:complexType name="ArrayOfCPlacasTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CPlacasTipo" nillable="true" type="tns:CPlacasTipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCPlacasTipo" nillable="true" type="tns:ArrayOfCPlacasTipo" />
+  <xs:complexType name="CPlacasTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Secuencial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CPlacasTipo" nillable="true" type="tns:CPlacasTipo" />
 </xs:schema>

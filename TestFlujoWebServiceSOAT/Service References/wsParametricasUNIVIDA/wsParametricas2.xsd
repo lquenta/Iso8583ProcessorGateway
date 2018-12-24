@@ -114,4 +114,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ParObtenerBancos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerBancos" nillable="true" type="q17:CEParObtenerBancos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerBancosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerBancosResult" nillable="true" type="q18:CSParObtenerBancos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerPlacasTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesEntrada" minOccurs="0" name="oEParObtenerPlacasTipo" nillable="true" type="q19:CEParObtenerPlacasTipo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParObtenerPlacasTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ExternosNegociosCoreSoat.Modulos.Parametricas.ClasesSalida" minOccurs="0" name="ParObtenerPlacasTipoResult" nillable="true" type="q20:CSParObtenerPlacasTipo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

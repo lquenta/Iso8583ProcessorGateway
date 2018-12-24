@@ -25,6 +25,17 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="CEVen" nillable="true" type="tns:CEVen" />
+  <xs:complexType name="CEVen01ValidarVendibleYObtenerDatosInter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoatVentaCajero" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiTParPlacaTipo" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen01ValidarVendibleYObtenerDatosInter" nillable="true" type="tns:CEVen01ValidarVendibleYObtenerDatosInter" />
   <xs:complexType name="CEVen02ObtenerPrima">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CEVen">
@@ -86,6 +97,29 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="CEVen03EfectivizarFactCicl" nillable="true" type="tns:CEVen03EfectivizarFactCicl" />
+  <xs:complexType name="CEVen03EfectivizarFactCiclInter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen03EfectivizarFact">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FactSucursalFk" type="xs:int" />
+          <xs:element minOccurs="0" name="PropCelular" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropCi" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropDireccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropNit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropTelefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropTomador" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiAnio" type="xs:int" />
+          <xs:element minOccurs="0" name="VehiChasis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiMarca" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiModelo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiMotor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehiTParPlacaTipo" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen03EfectivizarFactCiclInter" nillable="true" type="tns:CEVen03EfectivizarFactCiclInter" />
   <xs:complexType name="CEVen04Listar">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CEVen">
@@ -122,4 +156,15 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="CEVen06Revertir" nillable="true" type="tns:CEVen06Revertir" />
+  <xs:complexType name="CEVen07SolRevertir">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEVen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Motivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoatNroComprobante" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEVen07SolRevertir" nillable="true" type="tns:CEVen07SolRevertir" />
 </xs:schema>

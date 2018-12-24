@@ -32,6 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MSBuild.Community.Tasks, Version=1.3.0.0, Culture=neutral, PublicKeyToken=e8bf2261941c3948, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenIso8583.Net.0.5.2\lib\MSBuild.Community.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenIso8583Net, Version=0.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenIso8583.Net.0.5.2\lib\OpenIso8583Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +52,9 @@
     <Compile Include="ISO8583.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

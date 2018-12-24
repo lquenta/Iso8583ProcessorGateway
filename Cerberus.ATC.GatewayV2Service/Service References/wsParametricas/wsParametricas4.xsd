@@ -77,12 +77,20 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="CEParObtenerVentaCanal" nillable="true" type="tns:CEParObtenerVentaCanal" />
-  <xs:complexType name="CEParBancos">
+  <xs:complexType name="CEParObtenerBancos">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:CEPar">
         <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="CEParBancos" nillable="true" type="tns:CEParBancos" />
+  <xs:element name="CEParObtenerBancos" nillable="true" type="tns:CEParObtenerBancos" />
+  <xs:complexType name="CEParObtenerPlacasTipo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CEPar">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CEParObtenerPlacasTipo" nillable="true" type="tns:CEParObtenerPlacasTipo" />
 </xs:schema>

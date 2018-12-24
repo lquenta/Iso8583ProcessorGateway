@@ -101,4 +101,14 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="CSParObtenerBancos" nillable="true" type="tns:CSParObtenerBancos" />
+  <xs:complexType name="CSParObtenerPlacasTipo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CSPar">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ExternosAgenteServiciosCoreSoat.Modulos.Parametricas.EntidadesSaida" minOccurs="0" name="lPlacasTipo" nillable="true" type="q11:ArrayOfCPlacasTipo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CSParObtenerPlacasTipo" nillable="true" type="tns:CSParObtenerPlacasTipo" />
 </xs:schema>

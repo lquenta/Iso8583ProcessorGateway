@@ -19,6 +19,12 @@
   <wsdl:message name="IwsVentas_Ven01ValidarVendibleYObtenerDatos_OutputMessage">
     <wsdl:part name="parameters" element="tns:Ven01ValidarVendibleYObtenerDatosResponse" />
   </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven01ValidarVendibleYObtenerDatosInter_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven01ValidarVendibleYObtenerDatosInter" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven01ValidarVendibleYObtenerDatosInter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven01ValidarVendibleYObtenerDatosInterResponse" />
+  </wsdl:message>
   <wsdl:message name="IwsVentas_Ven02ObtenerPrima_InputMessage">
     <wsdl:part name="parameters" element="tns:Ven02ObtenerPrima" />
   </wsdl:message>
@@ -42,6 +48,12 @@
   </wsdl:message>
   <wsdl:message name="IwsVentas_Ven03EfectivizarFactCicl_OutputMessage">
     <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactCiclResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactCiclInter_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactCiclInter" />
+  </wsdl:message>
+  <wsdl:message name="IwsVentas_Ven03EfectivizarFactCiclInter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactCiclInterResponse" />
   </wsdl:message>
   <wsdl:message name="IwsVentas_Ven03EfectivizarFactCiclPDF_InputMessage">
     <wsdl:part name="parameters" element="tns:Ven03EfectivizarFactCiclPDF" />
@@ -84,6 +96,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven01ValidarVendibleYObtenerDatos" message="tns:IwsVentas_Ven01ValidarVendibleYObtenerDatos_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven01ValidarVendibleYObtenerDatosResponse" message="tns:IwsVentas_Ven01ValidarVendibleYObtenerDatos_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Ven01ValidarVendibleYObtenerDatosInter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven01ValidarVendibleYObtenerDatosInter" message="tns:IwsVentas_Ven01ValidarVendibleYObtenerDatosInter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven01ValidarVendibleYObtenerDatosInterResponse" message="tns:IwsVentas_Ven01ValidarVendibleYObtenerDatosInter_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Ven02ObtenerPrima">
       <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven02ObtenerPrima" message="tns:IwsVentas_Ven02ObtenerPrima_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven02ObtenerPrimaResponse" message="tns:IwsVentas_Ven02ObtenerPrima_OutputMessage" />
@@ -99,6 +115,10 @@
     <wsdl:operation name="Ven03EfectivizarFactCicl">
       <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCicl" message="tns:IwsVentas_Ven03EfectivizarFactCicl_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclResponse" message="tns:IwsVentas_Ven03EfectivizarFactCicl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactCiclInter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclInter" message="tns:IwsVentas_Ven03EfectivizarFactCiclInter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclInterResponse" message="tns:IwsVentas_Ven03EfectivizarFactCiclInter_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Ven03EfectivizarFactCiclPDF">
       <wsdl:input wsaw:Action="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclPDF" message="tns:IwsVentas_Ven03EfectivizarFactCiclPDF_InputMessage" />
@@ -136,6 +156,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Ven01ValidarVendibleYObtenerDatosInter">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven01ValidarVendibleYObtenerDatosInter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Ven02ObtenerPrima">
       <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven02ObtenerPrima" style="document" />
       <wsdl:input>
@@ -165,6 +194,15 @@
     </wsdl:operation>
     <wsdl:operation name="Ven03EfectivizarFactCicl">
       <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCicl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ven03EfectivizarFactCiclInter">
+      <soap:operation soapAction="http://tempuri.org/IwsVentas/Ven03EfectivizarFactCiclInter" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

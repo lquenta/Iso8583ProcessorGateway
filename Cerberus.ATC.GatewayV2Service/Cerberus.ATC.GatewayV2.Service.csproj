@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.5.11\lib\net40-client\NLog.dll</HintPath>
       <Private>True</Private>
@@ -41,9 +44,11 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,13 +96,22 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Service References\wsParametricas\Cerberus.ATC.GatewayV2Service.wsParametricas.CSParObtenerPlacasTipo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen01ValidarVendibleYObtenerDatos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen01ValidarVendibleYObtenerDatosInter.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen02ObtenerPrima.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen03EfectivizarFactCicl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen03EfectivizarFactCiclInter.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\wsVentas\Cerberus.ATC.GatewayV2Service.wsVentas.CSVen03EfectivizarFactCiclPDF.datasource">
